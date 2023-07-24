@@ -6,7 +6,6 @@
 import hashlib
 import random
 
-
 def check(input):
     if input[:12] != 'amateursCTF{':
         return False

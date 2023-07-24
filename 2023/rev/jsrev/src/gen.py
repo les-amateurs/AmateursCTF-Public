@@ -26,16 +26,6 @@ SPHERE_RADIUS = 0.2
 charX = baseX
 charZ = baseZ
 pts = []
-# for c in flag[:8]:
-#     bmp = font_bmp[c]
-#     for x in range(12):
-#         x_offset = x * SPHERE_RADIUS * 2
-#         for z in range(8):
-#             z_offset = z * SPHERE_RADIUS * 2
-#             if bmp[x][z]:
-#                 pts.append([charX + x_offset + SPHERE_RADIUS, BASEY, charZ + z_offset + SPHERE_RADIUS])
-    
-#     charZ -= 3
 
 for c in flag:
     bmp = font_bmp[c]

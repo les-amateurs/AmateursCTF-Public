@@ -1,0 +1,3 @@
+uncompress the image data and diff the bits.
+
+diffing the bits is sometimes ambiguous. there's two routes to this. either observe the pattern in the placement of the bits and extrapolate, or try to patch and guess the flag based on what you know.

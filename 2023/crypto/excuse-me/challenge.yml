@@ -1,0 +1,14 @@
+name: Excuse me
+author: hellopir2
+description: |-
+    Uhhh I found this random text on the ground.
+
+    Hint 1: it's a python file. it may contain unicode/utf-16. starts with a multiline comment.
+
+    Hint 2: Save the keys.
+
+flag: amateursCTF{if_ever_there_was_a_substitution_cipher_it_would_definitely_not_be_this_one_wtf_is_this_9b104e1c}
+
+provide: 
+    - ./bloat.txt
+    - ./popular.txt

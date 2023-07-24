@@ -1,0 +1,40 @@
+name: go-gopher
+author: voxal
+description: |-
+  psst... i know flag sharing isn't allowed, and i found this page where someone seems to be recieving flags from someone else. can you somehow find a way to hijack this site so it gives me flags? thanks.
+
+  gopher://{{ challenge.expose.main[0].host }}:{{ challenge.expose.main[0].tcp }}/
+  [gopher-bot.amt.rs](https://gopher-bot.amt.rs/)
+
+flag: amateursCTF{wh0_s@ys_goph3r_i5nt_web?}
+
+provide:
+    - main.go
+    - file: bot/main.go
+      as: bot.go
+
+containers:
+  main:
+    build: .
+    resources:
+      limits:
+        cpu: 100m
+        memory: 100M
+    ports:
+      - 7000
+  bot:
+    build: bot
+    resources:
+      limits:
+        cpu: 100m
+        memory: 100M
+    ports:
+      - 8080
+
+expose:
+  main:
+    - target: 7000
+      tcp: 31290
+  bot:
+    - target: 8080
+      http: gopher-bot

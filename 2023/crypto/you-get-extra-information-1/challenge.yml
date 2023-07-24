@@ -1,0 +1,10 @@
+name: You get extra information 1
+author: hellopir2
+description: |-
+    ![@quasar0147 solve it in 3 operations now.](https://media.discordapp.net/attachments/1090831744778895492/1129316524281315368/image.png)
+
+flag: amateursCTF{harder_than_3_operations?!?!!}
+
+provide: 
+    - ./main.py
+    - ./output.txt

@@ -1,0 +1,25 @@
+name: volcano
+author: flocto
+description: |-
+    Inspired by recent "traumatic" events.
+
+    `{{nc}}`
+    
+flag: amateursCTF{yep_th0se_l00k_th3_s4me_to_m3!_:clueless:}
+
+provide:
+    - ./volcano
+
+containers:
+  main:
+    build: .
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+  - target: 5000
+    tcp: 31010

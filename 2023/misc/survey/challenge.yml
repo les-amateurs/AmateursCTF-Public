@@ -1,0 +1,10 @@
+name: Survey
+author: amateursCTF-organizers
+description: |-
+  Fill out this feedback form!
+
+  [https://forms.gle/ts8XvwiSswA5suHbA](https://forms.gle/ts8XvwiSswA5suHbA)
+    
+flag: amateursCTF{surv3ys_h3lp_us_impr0v3_futur3_c0mp3tit1ons}
+
+value: 10

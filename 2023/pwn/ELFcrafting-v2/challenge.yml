@@ -1,0 +1,28 @@
+id: elfcrafting-v2
+name: ELFcrafting-v2
+author: unvariant
+description: |-
+  The smallest possible 64 bit ELF is 80 bytes. Can you golf it down to 79 bytes?
+
+  `{{nc}}`
+
+flag:
+  file: ./chal/flag.txt
+
+provide:
+  - ./chal/chal
+  - ./chal/Dockerfile
+
+containers:
+  main:
+    build: ./chal
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: 31179

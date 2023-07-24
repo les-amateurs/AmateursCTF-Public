@@ -1,0 +1,32 @@
+name: q-CHeSHire's game
+author: flocto
+description: |-
+  A friendly cat approaches you with an interesting game. If you can win enough times, maybe it'll give you the flag?
+
+  This challenge was done on Qiskit version 0.42.1. See `template.py` for an example of server interaction.
+
+  `{{nc}}`
+
+flag: amateursCTF{4re_you_SURE_Alice_&_Bob_ar3nt_ta1k1ng?}
+
+provide:
+  - ./q-cheshires-game.py
+  - ./template.py
+
+containers:
+  main:
+    build: .
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+    resources:
+      limits:
+        memory: 450Mi
+        cpu: 300m
+
+expose:
+  main:
+  - target: 5000
+    tcp: 31011

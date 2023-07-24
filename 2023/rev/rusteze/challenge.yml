@@ -1,0 +1,11 @@
+name: rusteze
+author: flocto
+description: |-
+    Get rid of all your Rust rust with this brand new Rust-eze™ de-ruster.
+
+    Flag is `amateursCTF{[a-zA-Z0-9_]+}`
+    
+flag: amateursCTF{h0pe_y0u_w3r3nt_t00_ru5ty}
+
+provide:
+    - ./rusteze

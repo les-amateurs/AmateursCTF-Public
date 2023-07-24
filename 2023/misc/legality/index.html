@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Locker</title>
+</head>
+<style>
+    body {
+        font-family: sans-serif;
+        text-align: center;
+        background-color: #fdf6e3;
+        color: #5c6a72
+    }
+
+    input[type=text] {
+        width: 48rem;
+        font-size: 1.5rem;
+        border-radius: 1.5rem;
+        border: 1px solid #939f91;
+        background-color: #f4f0d9;
+        color: #5c6a72;
+        padding: 0.5rem 1rem;
+    }
+
+    input[type=submit] {
+        margin-top: 1rem;
+        font-size: 1.1rem;
+        background-color: #8da101;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 3rem;
+        cursor: pointer;
+        color: #efebd4
+    }
+</style>
+<body>
+    <h1>Secure Locker</h1>
+    <h2>This vault is locked. Please enter the password to the vault below.</h2>
+    <form action="/submit">
+        <input type="text" name="password"/> <br />
+        <input type="submit" value="Submit"/>
+    </form>
+    <footer>
+        <p>This piece of software is listed under <a href="/LICENSE">AGPL</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,28 @@
+name: simple-heap-v1
+author: unvariant
+description: |-
+  Nothing to see here. Just a regular heap chall.
+
+  `{{nc}}`
+  
+  Note: flag format is not the normal one
+flag:
+  file: ./chal/flag.txt
+
+provide:
+  - ./chal/chal
+  - ./chal/Dockerfile
+
+containers:
+  main:
+    build: ./chal
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: 31176

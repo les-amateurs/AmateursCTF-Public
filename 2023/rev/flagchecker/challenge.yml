@@ -1,0 +1,12 @@
+name: flagchecker
+author: flocto, hellopir2
+description: |-
+    I was making this simple flag checker in Scratch, but my friend logged into my account and messed up all my variable names :(.
+    Can you help me recover my flag please? 
+
+    You should run on [Turbowarp](https://turbowarp.org/) for better performance.
+    
+flag: amateursCTF{screw_scratch_llvm_we_code_by_hand_1a89c87b}
+
+provide:
+    - ./flagchecker.sb3

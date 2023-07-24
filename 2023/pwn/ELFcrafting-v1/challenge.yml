@@ -1,0 +1,28 @@
+id: elfcrafting-v1
+name: ELFcrafting-v1
+author: unvariant
+description: |-
+  How well do you understand the ELF file format?
+
+  `{{nc}}`
+
+flag:
+  file: ./chal/flag.txt
+
+provide:
+  - ./chal/chal
+  - ./chal/Dockerfile
+
+containers:
+  main:
+    build: ./chal
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: 31178

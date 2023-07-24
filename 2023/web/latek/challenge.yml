@@ -1,0 +1,27 @@
+name: latek
+author: smashmaster
+description: |-
+  bryanguo (not associated with the ctf), keeps saying it's pronouced latek not latex like the glove material. anyways i made this simple app so he stops paying for overleaf. 
+  
+  Note: flag is ONLY at `/flag.txt`
+
+  {{link}}
+    
+flag: 
+  file: flag.txt
+
+containers:
+  main:
+    build: .
+    resources:
+      limits:
+        cpu: 200m
+        # latex may be a bit memory hungry
+        memory: 400M
+    ports:
+      - 5000
+
+expose:
+  main:
+    - target: 5000
+      http: latek

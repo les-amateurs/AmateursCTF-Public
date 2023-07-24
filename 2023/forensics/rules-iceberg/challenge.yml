@@ -1,0 +1,13 @@
+name: rules-iceberg
+author: stuxf
+description: |-
+    So apparently larry leaked this challenge already. Due to high demand for rules-iceberg stego and server profile picture discord stego, I've decided to release the challenge anyways.
+
+flag: 
+    file: ./flag.txt
+
+provide: 
+    - ./generate.py
+    - ./rules-iceberg.png
+    - ./new-rules-iceberg.png
+    - ./larry-screenshot.png

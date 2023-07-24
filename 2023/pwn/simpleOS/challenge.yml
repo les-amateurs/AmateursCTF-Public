@@ -1,0 +1,36 @@
+name: simpleOS
+id: simple-os
+author: unvariant
+description: |-
+  If you were hoping that this would be some kernel pwn I'm afraid that you'll be disappointed...
+
+  I wanted an excuse to write something in zig, so here we are!
+
+  `{{nc}}`
+
+flag:
+  file: ./flag.txt
+
+provide:
+  - ./dist.zip
+
+containers:
+  main:
+    build: .
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+    resources:
+      limits:
+        cpu: 200m
+        memory: 300Mi
+      requests:
+        cpu: 100m
+        memory: 200Mi
+
+expose:
+  main:
+    - target: 5000
+      tcp: 31180

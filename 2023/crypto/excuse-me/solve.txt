@@ -1,0 +1,1 @@
+it's a substitution cipher on substitution ciphers. the way i would solve this would be to find the dictionaries for each sentence, then once enough data is collected i can start substittuing them in and seeing which one matches best. then just do some frequency analysis (this is a python file) and u have flag wowowwo.

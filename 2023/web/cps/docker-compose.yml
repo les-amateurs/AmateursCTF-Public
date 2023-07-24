@@ -1,0 +1,10 @@
+version: '3'
+services:
+  main:
+    build: .
+    ports:
+      - 8080:80
+  db:
+    build: db
+    ports:
+      - 3306

@@ -1,0 +1,10 @@
+name: OwO time pad
+author: hellopir2
+description: |-
+    One time pad best cipher. It's unbreakable! Hmm what's the point of it if I have to give you the key though...?
+
+flag: amateursCTF{M4yb3_H4v3_b3tt3r_0tP_3ncrYpt10n_n3X7_t1m3_l0L!!_a585b81b}
+
+provide: 
+    - ./main.py
+    - ./out.txt

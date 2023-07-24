@@ -1,0 +1,25 @@
+name: Censorship Lite
+author: hellopir2 and flocto
+description: |-
+    There was clearly not enough censorship last time. This time it's lite:tm:. I'm afraid now you'll never get in to my system! Unfortunate for those pesky CTFers. Better social engineer an admin for the flag!!!!
+
+    `{{nc}}`
+
+flag: amateursCTF{sh0uld'v3_r3strict3D_p4r3nTh3ticaLs_1nst3aD}
+provide: 
+    - ./main.py
+
+containers:
+  main:
+    build: .
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: 31671
+

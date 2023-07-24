@@ -1,0 +1,27 @@
+name: Censorship Lite++
+id: censorship-lite-plus-plus
+author: hellopir2 and flocto
+description: |-
+    I've gotten tired of everyone opening shells on my computer, so I'm increasing the size of the blocklist. I'm not sure how you got into the previous one, but you definitely can't get into this one. (Flag format is `amateursCTF{[a-zA-Z_]*}`, for any CTFers looking to social engineer an admin for the flag).
+
+    `{{nc}}`
+
+flag: amateursCTF{le_elite_little_tiles_let_le_light_light_le_flag_til_the_light_tiled_le_elitist_level}
+
+provide: 
+    - ./main.py
+
+containers:
+  main:
+    build: .
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+    limits:
+      memory: 250Mi
+expose:
+  main:
+    - target: 5000
+      tcp: 31672

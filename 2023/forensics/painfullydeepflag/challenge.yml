@@ -1,0 +1,9 @@
+name: Painfully Deep Flag
+author: smashmaster
+description: |-
+    This one is a bit deep in the stack.
+
+flag: amateursCTF{0ut_0f_b0unds}
+
+provide: 
+    - ./flag.pdf

@@ -1,0 +1,30 @@
+name: church
+author: skittles1412
+description: |-
+  Can you help the traveling worshipper? Don't forget to orz Larry.
+  
+  `{{nc}}`
+
+flag:
+  file: ./flag.txt
+
+provide:
+  - ./church.zip
+
+containers:
+  main:
+    build: .
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+    resources:
+      limits:
+        cpu: 200m
+        memory: 400M
+
+expose:
+  main:
+    - target: 5000
+      tcp: 31691

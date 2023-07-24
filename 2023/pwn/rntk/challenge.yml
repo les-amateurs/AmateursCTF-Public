@@ -1,0 +1,27 @@
+name: rntk
+author: voxal
+description: |-
+  check out my random number toolkit!
+
+  `{{nc}}`
+
+flag:
+  file: ./chal/flag.txt
+
+provide:
+  - ./chal/chal
+  - ./chal/Dockerfile
+
+containers:
+  main:
+    build: ./chal
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: 31175

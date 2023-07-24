@@ -1,0 +1,28 @@
+name: permissions
+author: unvariant
+description: |-
+  Every programmer should read the [Intel Software Developer Manuals](https://cdrdv2.intel.com/v1/dl/getContent/671200) at least once.
+
+  `{{nc}}`
+
+flag:
+  file: ./chal/flag.txt
+
+provide:
+  - ./chal/chal.c
+  - ./chal/chal
+  - ./chal/Dockerfile
+
+containers:
+  main:
+    build: ./chal
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: 31174

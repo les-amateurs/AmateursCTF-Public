@@ -1,0 +1,25 @@
+name: legality
+author: voxal
+description: |-
+  When looking at licenses, there were too many licenses to pick on, but I finally settled on AGPL. Using it, I wrote a very secure locker!
+
+  However, I was using a SaaS and lost my password and they won't help me out, do you think you could try to find it for me?
+
+  {{link}}
+
+flag: "amateursCTF{fsf_1s_fre3_not_fr0g!}"
+
+containers:
+  main:
+    build: .
+    resources:
+      limits:
+        cpu: 100m
+        memory: 100M
+    ports:
+      - 8000
+
+expose:
+  main:
+    - target: 8000
+      http: legality

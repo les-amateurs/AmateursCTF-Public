@@ -1,0 +1,43 @@
+body {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+h1 {
+    color: #ff9900;
+}
+
+input[type="text"] {
+    border: 1px solid #999999;
+    padding: 5px;
+    border-radius: 3px;
+    color: #333333;
+    background-color: #ffffff;
+}
+
+input[type="submit"] {
+    background-color: #ff9900;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #ff9900;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

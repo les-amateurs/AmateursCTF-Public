@@ -1,0 +1,7 @@
+name: Compact XORs
+author: skittles1412
+description: |-
+    I found some hex in a file called fleg, but I'm not sure how it's encoded. I'm pretty sure it's some kind of xor...
+flag: amateursCTF{saves_space_but_plaintext_in_plain_sight_862efdf9}
+provide: 
+    - ./fleg

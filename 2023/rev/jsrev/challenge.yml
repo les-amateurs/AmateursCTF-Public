@@ -1,0 +1,24 @@
+name: jsrev
+author: flocto
+description: |-
+    Someone wanted this, so I delivered.
+    Have fun!
+
+    {{link}}
+    
+flag: amateursCTF{asK_4nD_thr33_5h4ll_r3c31v3}
+
+containers:
+  main:
+    build: .
+    resources:
+      limits:
+        cpu: 100m
+        memory: 100M
+    ports:
+      - 8080
+
+expose:
+  main:
+    - target: 8080
+      http: jsrev

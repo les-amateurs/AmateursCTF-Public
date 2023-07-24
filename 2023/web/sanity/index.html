@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sanity</title>
+</head>
+
+<body>
+    <input placeholder="Name your rant..." id="title" maxlength="100">
+    <br />
+    <textarea placeholder="Write your mind out..." id="area" cols="75" rows="25" maxlength="2000"></textarea>
+    <br />
+    <button onclick="submit()">Submit</button>
+    <p id="err"></p>
+    <script>
+        const submit = () => {
+            fetch("/submit", {
+                method: "POST",
+                body: JSON.stringify({
+                    title: title.value,
+                    body: area.value,
+                }),
+                headers: {
+                    'Content-Type': "application/json",
+                }
+            })
+                .then(t => t.text())
+                .then(t => t === "no body" || t === "no title" || t === "title too long" || t === "body too long" ?
+                    err.innerHTML = t :
+                    window.location.href = `/${t}`);
+        }
+    </script>
+</body>
+
+</html>

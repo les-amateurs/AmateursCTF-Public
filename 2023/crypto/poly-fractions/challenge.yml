@@ -1,0 +1,25 @@
+name: Poly Fractions
+author: hellopir2
+description: |-
+  I "lost" my flag in the coefficients of a rational expression, could you help recover it?
+  
+  `{{nc}}`
+
+flag: amateursCTF{c001-polynOmiaL_iNt3rp0La7ioN&&&}
+
+provide: 
+    - main.py
+
+containers:
+  main:
+    build: .
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: 31312

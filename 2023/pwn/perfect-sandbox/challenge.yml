@@ -1,0 +1,30 @@
+name: perfect-sandbox
+author: unvariant
+description: |-
+  This is a perfect sandbox with absolutely no way to leak the flag!
+
+  `{{nc}}`
+
+  You should probably read [https://arxiv.org/pdf/2304.07940.pdf](https://arxiv.org/pdf/2304.07940.pdf) or [https://gruss.cc/files/prefetch.pdf](https://gruss.cc/files/prefetch.pdf).
+
+flag:
+  file: ./chal/flag.txt
+
+provide:
+  - ./chal/chal.c
+  - ./chal/chal
+  - ./chal/Dockerfile
+
+containers:
+  main:
+    build: ./chal
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: 31173

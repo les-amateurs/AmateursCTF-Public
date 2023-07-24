@@ -1,0 +1,112 @@
+{
+  "title": "Lahoot Dev Edition",
+  "questions": [
+    [
+        {
+            "question": {
+                "text": "What color is the sky?"
+            },
+            "answers": [
+                "Blue",
+                "Red",
+                "Green",
+                "Yellow"
+            ]
+        },
+        {
+            "question": {
+                "text": "First letter of alphabet is?"
+            },
+            "answers": [
+                "A",
+                "B",
+                "C",
+                "D"
+            ]
+        },
+        {
+            "question": {
+                "text": "What byte is in my memory at 0x17"
+            },
+            "answers": [
+                "11",
+                "01",
+                "00",
+                "01"
+            ],
+            "correctIndex": 0
+        },
+        {
+            "question": {
+                "text": "What byte is in my memory at 0x17"
+            },
+            "answers": [
+                "01",
+                "11",
+                "01",
+                "00"
+            ],
+            "correctIndex": 0
+        },
+        {
+            "question": {
+                "text": "What byte is in my memory at 0x17"
+            },
+            "answers": [
+                "01",
+                "11",
+                "00",
+                "01"
+            ],
+            "correctIndex": 0
+        },
+        {
+            "question": {
+                "text": "What byte is in my memory at 0x17"
+            },
+            "answers": [
+                "01",
+                "01",
+                "11",
+                "00"
+            ],
+            "correctIndex": 0
+        },
+        {
+            "question": {
+                "text": "What byte is in my memory at 0x18"
+            },
+            "answers": [
+                "11",
+                "01",
+                "00",
+                "01"
+            ],
+            "correctIndex": 0
+        },
+        {
+            "question": {
+                "text": "What byte is in my memory at 0x18"
+            },
+            "answers": [
+                "11",
+                "00",
+                "01",
+                "01"
+            ],
+            "correctIndex": 0
+        }
+    ]
+  ],
+  "round_distribution": [3],
+  "lobby_time": 15000,
+  "lobby_music": "null.mp3",
+  "gameplay_music": "null.mp3",
+  "motd": "insert motd here ",
+  "teaseTime": 1000,
+  "points": 1000,
+  "decaying_time": 15000,
+  "offset": 500,
+  "review_time": 3000,
+  "answeringTime": 5000
+}

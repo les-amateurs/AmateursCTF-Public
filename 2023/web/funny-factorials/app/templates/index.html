@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Factorial Calculator</title>
+    <!-- inline styles passed into the template -->
+    <style>
+        {{ css }}
+    </style>
+  </head>
+  <body>
+    <h1>Factorial Calculator</h1>
+    <form method="POST">
+      <label for="number">Enter a number:</label>
+      <input type="text" name="number" id="number" />
+      <input type="submit" value="Calculate" />
+    </form>
+    {% if error %}
+    <p>{{ error }}</p>
+    {% elif result %}
+    <p>The factorial of {{ number }} is {{ result }}.</p>
+    {% endif %}
+    <p>Available themes:</p>
+        <a href="?theme=themes/theme1.css">cool</a>
+        <a href="?theme=themes/theme2.css">warm</a>
+    <ul></ul>
+  </body>
+</html>

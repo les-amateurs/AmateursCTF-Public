@@ -1,0 +1,9 @@
+name: zipper
+author: flocto
+description: |-
+    Stare into the zip and the zip stares back.
+
+flag: amateursCTF{z1PP3d_in5id3_4_laY3r_0f_Zips}
+
+provide: 
+    - ./flag.zip

@@ -1,0 +1,29 @@
+name: whiteboard
+author: skittles1412
+description: |-
+  Bryan Gao has gotten into the habit of starting with some numbers on the whiteboard, and then writing down the result of applying a function on a set of the numbers on the whiteboard on the whiteboard. See if you're skilled enough at this to achieve flag!
+  
+  `{{nc}}`
+
+flag:
+  file: ./flag.txt
+
+provide:
+  - ./main.py
+
+containers:
+  main:
+    build: .
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+    resources:
+      limits:
+        memory: 200Mi
+
+expose:
+  main:
+    - target: 5000
+      tcp: 31694

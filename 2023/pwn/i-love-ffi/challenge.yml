@@ -1,0 +1,30 @@
+name: i-love-ffi
+author: unvariant
+description: |-
+  I love ffi, don't you?
+
+  `{{nc}}`
+
+flag:
+  file: ./chal/flag.txt
+
+provide:
+  - ./chal/chal
+  - ./chal/chal.c
+  - ./chal/src/lib.rs
+  - ./chal/Dockerfile
+  - ./chal/libi_love_ffi.so
+
+containers:
+  main:
+    build: ./chal
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: 31172

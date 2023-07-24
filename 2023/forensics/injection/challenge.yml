@@ -1,0 +1,14 @@
+name: Injection
+author: hellopir2
+description: |-
+    Steganography is so overused so I made my own version! + stego bad so i made it even worse.
+
+    <!> Disclaimer. If you are considering making a ticket about this challenge, please consider otherwise. Think about why you want to make a ticket, and figure out how it works. Please only brute force a reasonable amount (less than 10 flags). <!>
+
+    Hint: focus on the IDAT.
+
+flag: amateursCTF{well_at_least_the_image_was_helpful_c134bc5f}
+
+provide: 
+    - ./flocto.png
+    - ./modified.png

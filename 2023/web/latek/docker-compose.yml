@@ -1,0 +1,9 @@
+# rcds emulator
+version: '3'
+services:
+  main:
+    build:
+      context: .
+      network: host
+    ports:
+      - "0.0.0.0:5000:5000"

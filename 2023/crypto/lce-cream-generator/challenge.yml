@@ -1,0 +1,25 @@
+name: lce cream generator
+author: hellopir2
+description: |-
+  Ice cream. Or wait... lce cream. Same difference.
+
+  `{{nc}}`
+
+flag: amateursCTF{bruh_why_would_you_use_lcg_for_signature}
+
+provide: 
+    - ./main.py
+
+containers:
+  main:
+    build: .
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: 31310

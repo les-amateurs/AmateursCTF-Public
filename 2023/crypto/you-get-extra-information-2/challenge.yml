@@ -1,0 +1,10 @@
+name: You get extra information 2
+author: hellopir2
+description: |-
+    You get more information! More complicated = more information right.
+
+flag: amateursCTF{omg_it's_my_favorite_epic_thing_where_it_looks_like_a_binomial!!}
+
+provide: 
+    - ./main.py
+    - ./output.txt

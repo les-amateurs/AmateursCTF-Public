@@ -1,0 +1,28 @@
+name: hex-converter-2
+author: stuxf
+description: |-
+  Unvariant took a look at my hex-converter. Because he's a pwn god, he pwned it. So this time, I made it print in reverse order so you can't go backwards in the stack!
+
+  `{{nc}}`
+
+flag:
+  file: ./chal/flag.txt
+
+provide:
+  - ./chal/chal
+  - ./chal/chal.c
+  - ./chal/Dockerfile
+
+containers:
+  main:
+    build: ./chal
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: 31631

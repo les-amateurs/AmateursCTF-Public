@@ -1,0 +1,28 @@
+name: sanity
+author: voxal
+category: web
+description: |-
+  check out this pastebin! its a great way to store pieces of your sanity between ctfs.
+
+  {{link}}
+    
+flag: amateursCTF{s@nit1zer_ap1_pr3tty_go0d_but_not_p3rf3ct}
+
+provide:
+    - index.js
+    - views/sanes.ejs
+
+containers:
+  main:
+    build: .
+    resources:
+      limits:
+        cpu: 300m
+        memory: 400M
+    ports:
+      - 3000
+
+expose:
+  main:
+    - target: 3000
+      http: sanity

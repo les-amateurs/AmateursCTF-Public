@@ -1,0 +1,28 @@
+name: frog-math
+author: unvariant
+description: |-
+  We found this legacy code on our disk that still uses mmx and x87 smh. Can you help us test it for any bugs?
+
+  Hint: refresher on [mmx and x87](https://www.cs.utexas.edu/users/moore/acl2/manuals/current/manual/index-seo.php/X86ISA____MMX-REGISTERS-READS-AND-WRITES) might help
+  `{{nc}}`
+
+flag:
+  file: ./chal/flag.txt
+
+provide:
+  - ./chal/chal
+  - ./chal/Dockerfile
+
+containers:
+  main:
+    build: ./chal
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: 31171

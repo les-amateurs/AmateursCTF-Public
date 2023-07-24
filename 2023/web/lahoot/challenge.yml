@@ -1,0 +1,43 @@
+name: lahoot
+author: smashmaster
+description: |-
+  Recently Kahoot decided to limit players to 10 if you don't pay a subscription fee. Since I'm broke, I decided to write my own self-hosted version Kahoot-style game. idk why but my friend thinks the code is a bit cursed. 
+  
+  {{link}}
+
+flag: "amateursCTF{w1nn3r_0f_rac3s}"
+
+containers:
+  main:
+    build: .
+    # user: "node"
+    # restart: always
+    # working_dir: /home/node/app
+    environment:
+      NODE_ENV: production
+      PORT: "8081"
+    command: "npm start"
+    ports: [8081]
+    resources:
+      limits:
+        memory: 300M
+        cpu: 100m
+  database:
+    image: postgres:15.3-alpine3.18
+    environment:
+      POSTGRES_PASSWORD: amazing_s3cur1ty_by_netw0rk_is0lation_m0m3nt
+      POSTGRES_USER: service
+      POSTGRES_DB: lahoot
+    ports: [5432]
+    resources:
+      limits:
+        memory: 100M
+        cpu: 100m
+
+expose:
+  main:
+    - target: 8081
+      tcp: 31458
+
+provide:
+  - ./Lahoot_Dist.7z

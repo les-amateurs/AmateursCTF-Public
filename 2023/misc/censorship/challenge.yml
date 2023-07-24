@@ -1,0 +1,26 @@
+name: Censorship
+author: hellopir2 and flocto
+description: |-
+    I'll let you run anything on my python program as long as you don't try to print the flag or violate any of my other rules! Pesky CTFers...
+
+    `{{nc}}`
+
+flag: amateursCTF{i_l0v3_overwr1t1nG_functions..:D}
+provide: 
+    - ./main.py
+
+containers:
+  main:
+    build: .
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+    limits:
+      memory: 250Mi
+
+expose:
+  main:
+    - target: 5000
+      tcp: 31670

@@ -1,0 +1,1 @@
+flag = b"amateursCTF{bruh_why_would_you_use_lcg_for_signature}"

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Latek Lover</title>
+  </head>
+  <body>
+    <style>
+      .grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50% 50%;
+        height: 90vh;
+        width: 100%;
+      }
+
+      .editor{
+        grid-column: 1;
+        grid-row: span 2;
+      }
+
+      .preview{
+          grid-column: 2;
+          grid-row: 1;
+      }
+
+      .errors{
+          grid-column: 2;
+          grid-row: 2;
+      }
+
+      .errors-log{
+        background-color: lightgrey;
+        width: 100%;
+        height: 100%;
+        font-family: monospace;
+      }
+
+      #errors-log{
+        overflow: scroll;
+      }
+
+      #latex{
+        width: 100%;
+        height: 100%;
+        resize: none;
+      }
+
+      #preview-iframe{
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <div class="grid">
+      <div class="editor">
+        <textarea id="latex" placeholder = "Don't you love not having the source?">
+\documentclass{article}
+\begin{document}
+Hello, world!
+\end{document} 
+        </textarea>
+      </div>
+      <div class="preview">
+        <iframe id="preview-iframe">
+
+        </iframe>
+      </div>
+      <div class="errors">
+          <pre class="errors-log" id="errors-log">
+Awaiting logs. 
+          </pre>
+      </div>
+    </div>
+    <script>
+
+      let pendingRenderTimeout = 0;
+
+      function render(){
+        fetch("/render", {
+          method: "POST",
+          body: JSON.stringify({
+            latex: document.getElementById("latex").value
+          }),
+          headers: {
+            "Content-Type": "application/json"
+          }
+        }).then(resp => {
+          if(resp.ok){
+            resp.json().then((json) => {
+              let url = new URL(location.href);
+              url.pathname = json.path;
+              console.log("New save " + json.id);
+              if(history.pushState) {
+                  history.pushState(null, null, "#" + json.id);
+              } else {
+                  location.hash = "#" + json.id;
+              }
+              document.getElementById("preview-iframe").src = "https://docs.google.com/viewer?embedded=true&url="  + encodeURIComponent(url.toString());
+              fetch("/document/" + json.id + ".log").then(resp2 => {
+                if(resp2.ok){
+                  resp2.text().then(logs => {
+                    document.getElementById("errors-log").innerText = logs;
+                  });
+                }
+              });
+              
+            });
+          }else{
+            document.getElementById("errors-log").innerText = "Server error: " + resp.status;
+          }
+          
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", (_) => {
+        document.getElementById("latex").addEventListener("keyup", function(ev){
+          try{
+            clearTimeout(pendingRenderTimeout);
+          }catch(ex){
+
+          }
+          pendingRenderTimeout = setTimeout(function(){
+            render();
+          }, 1000);
+        });
+
+        if(location.hash){
+          let id = location.hash.slice(1);
+          fetch("/source/" + id + ".tex").then(resp => {
+            if(resp.ok){
+              resp.text().then(latex => {
+                document.getElementById("latex").value = latex;
+                render();
+              });
+            }
+          });
+        }else{
+          pendingRenderTimeout = setTimeout(render, 100);
+        }
+      });
+    </script>
+  </body>
+</html>

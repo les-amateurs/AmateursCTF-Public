@@ -1,0 +1,25 @@
+name: Lottery
+author: hellopir2
+description: |-
+  Yeah so I made a flag lottery. Draw 3 times to get the flag... wait. I forgot I encrypted the flag. Eh, I'm sure you can figure that out yourself. Good luck!
+
+  `{{nc}}`
+
+flag: amateursCTF{th3r3"s_4_r3As0n-wHy_n0_0n3-fr<>n7.pads^th3!r_fIa6s-l0l,wH0-gu3s5ed!!!;4ls0,1g~r4n&om_n0t_so_rand<>m}
+
+provide: 
+    - ./main.py
+
+containers:
+  main:
+    build: .
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: 31311

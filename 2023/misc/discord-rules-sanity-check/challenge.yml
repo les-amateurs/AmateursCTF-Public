@@ -1,0 +1,8 @@
+name: Discord rules sanity check
+author: amateursCTF-organizers
+description: |-
+  Join the [discord](https://discord.gg/gCX22asy65) and read the rules!
+    
+flag: amateursCTF{be_honest._did_you_actually_read_the_rules?}
+
+value: 10

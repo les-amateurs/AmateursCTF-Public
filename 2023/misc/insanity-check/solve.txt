@@ -1,0 +1,1 @@
+blocks of like 4 characters are stored in the discord rules list. this is hinted at in the description if you remove all words starting with i.

@@ -1,0 +1,9 @@
+name: Non-Quadratic Residues
+author: hellopir2
+description: |-
+    I realized the flaw in my previous system, so now I'll patch it up using my new foolproof system. What previous system? I have no idea but maybe there used to be one??? I still think there's no way you're stealing my flag!
+
+flag: amateursCTF{w3ll_m4yb3_if_th3r3_w3r3_n0_fl4g_to_st3aL_n0_on3_w0uld_st3al_1t!!!!!_lmao_60b15b45}
+provide: 
+    - ./main.py
+    - ./output.txt

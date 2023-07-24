@@ -1,0 +1,29 @@
+docker:
+  image:
+    prefix: us-central1-docker.pkg.dev/amateursctf/ctf-docker-test
+
+  flagFormat: (amateursCTF)\{[ -z|~]+\}
+
+defaults:
+  containers:
+    resources:
+      limits:
+        cpu: 100m
+        memory: 150Mi
+      requests:
+        cpu: 25m
+        memory: 50Mi
+  sortOrder: -100
+
+backends:
+- resolve: k8s
+  options:
+    domain: amt.rs
+    annotations:
+      ingress:
+        traefik.ingress.kubernetes.io/router.tls: "true"
+- resolve: rctf
+  options:
+    scoring:
+      minPoints: 100
+      maxPoints: 500

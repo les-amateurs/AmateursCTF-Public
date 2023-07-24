@@ -1,0 +1,14 @@
+name: trick question
+author: flocto
+description: |-
+    Which one do you hate more: decompiling pycs or reading Python bytecode disassembly?
+    Just kidding that's a trick question.
+
+    Run with Python version `3.10`.
+
+    Flag is `amateursCTF{[a-zA-Z0-9_]+}`
+    
+flag: amateursCTF{PY7h0ns_ar3_4_f4m1lY_0f_N0Nv3nom0us_Sn4kes}
+
+provide:
+    - ./trick-question.pyc

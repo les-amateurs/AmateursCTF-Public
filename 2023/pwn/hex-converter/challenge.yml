@@ -1,0 +1,30 @@
+name: hex-converter
+author: stuxf
+description: |-
+  I kept on getting my hex mixed up while trying to solve unvariant's pwn challenges, so I wrote my own converter to help me out.
+
+  Hint: What's in the stack that we can overwrite?
+
+  `{{nc}}`
+
+flag:
+  file: ./chal/flag.txt
+
+provide:
+  - ./chal/chal
+  - ./chal/chal.c
+  - ./chal/Dockerfile
+
+containers:
+  main:
+    build: ./chal
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: 31630

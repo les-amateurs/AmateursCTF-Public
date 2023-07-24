@@ -1,0 +1,11 @@
+name: q-warmup
+author: flocto
+description: |-
+  If a bit flips and no one is around to observe it, does it still cause a bug?
+
+  This challenge was done on Qiskit version 0.42.1.
+
+flag: amateursCTF{n0thing_qU4ntum_4b0ut_th1s_4t_All}
+
+provide:
+  - ./q-warmup.py

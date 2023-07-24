@@ -1,0 +1,26 @@
+name: gcd-query-v2
+author: hellopir
+description: |-
+  I thought that skittles1412's querying system wasn't optimized enough, so I created my own. My system is so much more optimized than his!
+  
+  `{{nc}}`
+
+flag:
+  file: ./flag.txt
+
+provide:
+  - ./main.py
+
+containers:
+  main:
+    build: .
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: 31693

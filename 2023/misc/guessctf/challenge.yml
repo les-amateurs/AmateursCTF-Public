@@ -1,0 +1,14 @@
+name: guessctf
+author: hellopir2
+description: |-
+    I thought there wasn't enough guessing on this CTF, so I added some. All necessary hints are provided within the given file. Good luck! Only the last level solved gives points. This challenge is just for fun.<br>
+    **Note:**<br>
+    The flocto hint counter is cumulative. Thanks to flocto for testing this challenge and adding feedback for the challenges on the guessier side.<br>
+    **Note:**<br>
+    I added 17 more levels. Good luck have fun.
+
+flag: amateursCTF{i_legitimately_have_no_clue_how_you_guessed_your_way_here,but_good_job_ig_..._..._..._morse_code_next_time_maybe?}
+provide: 
+    - ./guessctf.zip
+
+value: 1

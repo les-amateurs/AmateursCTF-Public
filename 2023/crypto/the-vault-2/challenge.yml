@@ -1,0 +1,24 @@
+name: The Vault 2
+author: hellopir2
+description: |-
+    I remember this cool HSCTF-22 challenge that gave you like an admin key or something and then made you find bigger solutions. Well this time I'm not giving you an admin key. Good luck!
+  
+    `{{nc}}`
+flag: amateursCTF{h0w_d1d_y0u_stiLL_get_in_w1th0uT_MY_KEY?!?!?!??!?}
+
+provide: 
+    - ./main.py
+
+containers:
+  main:
+    build: .
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: 31313

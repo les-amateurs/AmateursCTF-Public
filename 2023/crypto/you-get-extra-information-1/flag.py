@@ -1,0 +1,1 @@
+flag = b"amateursCTF{harder_than_3_operations?!?!!}"

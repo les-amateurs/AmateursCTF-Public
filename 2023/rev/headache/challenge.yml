@@ -1,0 +1,10 @@
+name: headache
+author: flocto, unvariant
+description: |-
+    Ugh... my head hurts...
+    Flag is `amateursCTF{[a-zA-Z0-9_]+}`
+    
+flag: amateursCTF{i_h4v3_a_spli77ing_headache_1_r3qu1re_m04r_sl33p}
+
+provide:
+    - ./headache

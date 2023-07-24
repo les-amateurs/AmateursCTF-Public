@@ -1,0 +1,30 @@
+name: funny factorials
+author: stuxf
+description: |-
+  I made a factorials app! It's so fancy and shmancy. However factorials don't seem to properly compute at big numbers! Can you help me fix it?
+  
+  {{link}}
+    
+flag: 
+  file: flag.txt
+
+provide:
+  - Dockerfile
+  - app/app.py
+
+containers:
+  main:
+    build: .
+    environment:
+      PYTHON_MAX_RECURSION: "100" 
+    resources:
+      limits:
+        cpu: 100m
+        memory: 100M
+    ports:
+      - 5000
+
+expose:
+  main:
+    - target: 5000
+      http: funny-factorials

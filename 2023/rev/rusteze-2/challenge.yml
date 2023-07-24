@@ -1,0 +1,11 @@
+name: rusteze 2
+author: flocto
+description: |-
+    My boss said Linux binaries wouldn't reach enough customers so I was forced to make a Windows version.
+
+    Flag is `amateursCTF{[a-zA-Z0-9_]+}`
+    
+flag: amateursCTF{d0n3_4nd_deRust3d}
+
+provide:
+    - ./rusteze-2.exe

@@ -1,0 +1,1 @@
+png has a comment which has the second part of the jpeg. the last part of the jpeg is just sloppily shoved into the image data. the first part of the jpeg is missing but you can steal the first bytes from other jpegs since they are fairly common and it works

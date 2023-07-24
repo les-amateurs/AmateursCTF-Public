@@ -1,0 +1,79 @@
+ok so for this one you can just set up the following equations to extract the a and b values, after which the challenge is trivial:
+numbers are shorthand for x_n
+
+x, ax+b, a^2x+ab+b 
+
+a^2x^2+abx+bx 1*3
+a^2x^2+2abx+b^2 2*2
+abx+b^2-bx
+b(ax+b-x) # 2 - 1
+
+(2*2-1*3)/(2-1) = b
+(5-(5*5-4*6)/(5-4))/4 = a
+
+apparently this was unnecessary and you could just do (3-2)/(2-1) ig im just bad. whatever.
+
+
+add
+2 1
+add
+2 2
+combine
+1 2 mult
+add
+1 2
+add
+3 3
+combine
+2 3 mult
+combine
+1 2 sub
+add
+2 2
+add
+1 3
+combine
+2 3 sub
+combine
+1 2 div
+finish bowl
+add
+5 1
+add
+5 2
+combine
+1 2 mult
+add
+4 2
+add
+6 3
+combine
+2 3 mult
+combine
+1 2 sub
+add
+5 2
+add
+4 3
+combine
+2 3 sub
+combine
+1 2 div
+add
+5 2
+add
+4 3
+combine
+2 1 sub
+combine
+2 3 div
+finish
+
+this gives a, b from which you can break the LCG and then predict the last element.
+
+submit:
+p
+[[1337,0]]
+predicted last element
+
+for flag.

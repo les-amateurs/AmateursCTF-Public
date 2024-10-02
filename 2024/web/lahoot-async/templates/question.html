@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<section class="section" id = "question" data-id = "{{ session_state.current_question.id }}">
+    <div class="container">
+      <progress class="progress is-primary" value="{{ (session_state["current_question_index"] - 1) }}" max="{{ total }}">
+        {{ ((session_state["current_question_index"] - 1) / total) * 100 }}% done
+      </progress>
+      <h1 class="title">
+        Question #{{ session_state["current_question_index"] }}
+      </h1>
+      <p class="subtitle">
+        {% if session_state.current_question.category %}
+          Current Question Category: {{ session_state.current_question.category }}
+        {% else %}
+          Now with even more question diversity!!! (and maybe half the quality)
+        {% endif %}
+      </p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class = "content">
+        {{ session_state.current_question.question }}
+      </div>
+      <form method = "POST">
+        <div class="field">
+          <div class="control">
+      {% for answer in session_state.current_question.answers %}
+          <label for = "answer-{{ loop.index0 }}"><input type="radio" name="answer" value="{{ answer }}" id = "answer-{{ loop.index0 }}" required /> {{ answer }}</label> <br />
+      {% endfor %}
+          </div>
+        </div>
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link" type = "submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+{% endblock %}

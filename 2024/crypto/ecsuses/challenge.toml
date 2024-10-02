@@ -1,0 +1,9 @@
+name = "ecsuses"
+author = "hellopir2"
+description = """
+Was last year's excuse-me not crypto enough for you? I hope this one satisfies those who complained.
+"""
+provide = [ "./ecsuses.py", "./flagtxt"]
+
+[flag]
+file = "flag.txt"

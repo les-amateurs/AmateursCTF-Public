@@ -1,0 +1,36 @@
+name: guessctf
+author: helloperson
+description: |-
+  o7.
+
+  If you need help, check out the source to last year's guessctf [here](https://github.com/les-amateurs/AmateursCTF-Public/tree/main/2023/misc/guessctf)
+    
+flag: 
+  file: flag.txt
+
+provide:
+  - guessctf.zip
+
+containers:
+  a:
+    build: ./12
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+  b:
+    build: ./14
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  a:
+  - target: 5000
+    tcp: 14341
+  b:
+  - target: 5000
+    tcp: 14123

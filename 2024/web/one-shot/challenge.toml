@@ -1,0 +1,17 @@
+name = "one-shot"
+author = "voxal"
+description = """
+my friend keeps asking me to play OneShot. i haven't, but i made this cool challenge! 
+{{main.url}}
+"""
+flag = "amateursCTF{go_union_select_a_life}"
+
+provide = ["app.py", "Dockerfile"]
+
+[containers.main]
+build = "."
+limits = { cpu = 1, mem = 256 }
+
+[expose.main]
+target = 8080
+http = "one-shot"

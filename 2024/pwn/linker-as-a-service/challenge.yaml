@@ -1,0 +1,26 @@
+name: linker-as-a-service
+author: unvariant
+description: |-
+  Turing complete relocations are fun and all, but you can use them to pop a shell?
+
+  `{{nc}}`
+
+flag:
+  file: ./chal/flag.txt
+
+provide:
+  - ./dist.tar.xz
+
+containers:
+  main:
+    build: ./chal
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: CHAL_PORT

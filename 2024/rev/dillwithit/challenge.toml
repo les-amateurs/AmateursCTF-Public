@@ -1,0 +1,10 @@
+id = "dillwithit"
+name = "dill-with-it"
+author = "flocto"
+description = """Crisp green Larry lies\n
+Bathes, brining in vinegar\n
+Dill pickle delight"""
+provide = [ "./main.py",]
+
+[flag]
+file = "./flag.txt"

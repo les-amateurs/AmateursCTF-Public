@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% block title %} Home {% endblock %} {% block content
+%}
+<div class="container">
+  <section class="section">
+    {% if error %}
+    <article class="message is-danger">
+      <div class="message-header">
+        <p>Error</p>
+        <button class="delete" aria-label="delete"></button>
+      </div>
+      <div class="message-body">{{ error }}</div>
+    </article>
+    {% endif %}
+    <section class="hero is-link">
+      <div class="hero-body">
+        <h1 class="title">Welcome to Lahoot Asynchronous.</h1>
+        <p class="subtitle">Now with even more question diversity!</p>
+      </div>
+    </section>
+  </section>
+  <section class="session">
+    <h3 class="title is-3">Play a new round</h3>
+    <form action="/session" method="POST">
+      <div class="field">
+        <label class="label">Username</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="A unique username for you to claim."
+            name = "username"
+          />
+        </div>
+      </div>
+
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link" type="submit">Go</button>
+        </div>
+      </div>
+    </form>
+  </section>
+</div>
+{% endblock %}

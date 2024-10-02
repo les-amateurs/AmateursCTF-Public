@@ -1,0 +1,1 @@
+amateursCTF{no_self_modifying_relocations_smh}

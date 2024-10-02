@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', path = 'style.css') }}">
+    <title>{% block title %}{% endblock %} - Lahoot Async</title>
+    {% endblock %}
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div id="navbar" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href = "/">
+              Home
+            </a>
+            <a class="navbar-item" href = "/question">
+              Play
+            </a>
+            <a class="navbar-item" href = "/leaderboard">
+                Leaderboard
+            </a>
+          </div>
+          {%if session_state %}
+          <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="#">
+                          Hi, {{ session_state["username"] }}
+                        </a>
+                    </div>
+                </div>
+          </div>
+          {% endif %}
+        </div>
+      </nav>      
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            {% block footer %}
+                <p>We don't own any of this content. And we never will. Styled with <a href="https://bulma.io/">Bulma</a>. </p>
+            {% endblock %}
+        </div>
+    </footer>
+  </body>
+</html>

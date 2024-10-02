@@ -1,0 +1,23 @@
+name = "drunk-lcg"
+author = "hellopir2"
+description = """
+I hate it when my LCGs are drunk. I like drunk SBGs better.
+
+{{chal.url}}
+"""
+provide = [ "./drunk-lcg.py"]
+
+[flag]
+file = "flag.txt"
+
+[containers.chal]
+build = "."
+ports = [ 5000,]
+
+[expose.chal]
+target = 5000
+tcp = 1416
+
+[containers.chal.limits]
+cpu = 1
+mem = 256

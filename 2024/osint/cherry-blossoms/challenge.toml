@@ -1,0 +1,25 @@
+name = "cherry-blossoms"
+author = "smashmaster"
+description = """
+average southern californian reacts to DC weather. amazing scenery though at the time.
+
+Find the coords of this image! 
+
+Grader Command: {{chal.url}}
+"""
+
+flag = "amateursCTF{l00k1ng_l0v3ly_1n_4k}"
+provide = ["challenge.png", "main.py"]
+
+
+[containers.chal]
+build = "."
+ports = [ 5000,]
+
+[expose.chal]
+target = 5000
+tcp = 1771
+
+[containers.chal.limits]
+cpu = 1
+mem = 256

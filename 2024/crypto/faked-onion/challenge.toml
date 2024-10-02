@@ -1,0 +1,23 @@
+name = "faked-onion"
+author = "hellopir2"
+description = """
+Are you as fake as this onion?
+
+{{chal.url}}
+"""
+provide = [ "./faked-onion.py",]
+
+[flag]
+file = "flag.txt"
+
+[containers.chal]
+build = "."
+ports = [ 5000,]
+
+[expose.chal]
+target = 5000
+tcp = 1414
+
+[containers.chal.limits]
+cpu = 1
+mem = 256

@@ -1,0 +1,17 @@
+name = "idk"
+author = "idk"
+description = "idk"
+provide = []
+flag = "idk"
+hidden = true
+
+[containers.chal]
+build = "."
+
+[expose.chal]
+target = 8000
+http = "guessctf-level-12"
+
+[containers.chal.limits]
+cpu = 1
+mem = 256

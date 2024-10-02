@@ -1,0 +1,19 @@
+name = "heaps-of-fun"
+author = "unvariant"
+description = "We decided to make our own custom super secure database with absolutely no bugs!\n\n{{chal.url}}"
+provide = [ "./dist.tar.xz",]
+
+[flag]
+file = "chal/flag.txt"
+
+[containers.chal]
+build = "./chal"
+ports = [ 5000,]
+
+[expose.chal]
+target = 5000
+tcp = 1346
+
+[containers.chal.limits]
+cpu = 1
+mem = 256

@@ -1,0 +1,9 @@
+name = "guessctf"
+author = "helloperson"
+description = """
+  o7.\n
+  \n
+  If you need help, check out the source to last year's guessctf [here](https://github.com/les-amateurs/AmateursCTF-Public/tree/main/2023/misc/guessctf)
+"""
+flag.file = "flag.txt"
+provide = ["guessctf.zip"]

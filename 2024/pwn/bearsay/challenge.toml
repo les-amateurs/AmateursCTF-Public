@@ -1,0 +1,19 @@
+name = "bearsay"
+author = "unvariant"
+description = "bearsay(1)\n\nbearsay - configurable speaking/thinking bear (and a bit more)\n\n{{chal.url}}"
+provide = [ "./dist.tar.xz",]
+
+[flag]
+file = "chal/flag.txt"
+
+[containers.chal]
+build = "./chal"
+ports = [ 5000,]
+
+[expose.chal]
+target = 5000
+tcp = 1338
+
+[containers.chal.limits]
+cpu = 1
+mem = 256

@@ -1,0 +1,23 @@
+name = "zig-jail-2"
+author = "unvariant"
+description = """
+What compiler limits?
+
+{{chal.url}}
+"""
+provide = [ "./chal.py", "./zig-linux-x86_64-0.11.0.tar.xz", "Dockerfile"]
+
+[flag]
+file = "flag.txt"
+
+[containers.chal]
+build = "."
+ports = [ 5000,]
+
+[expose.chal]
+target = 5000
+tcp = 1516
+
+[containers.chal.limits]
+cpu = 1
+mem = 256

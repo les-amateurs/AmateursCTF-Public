@@ -1,0 +1,23 @@
+name = "orz-larry"
+author = "skittles1412"
+description = """\
+I wrote code to try to solve the problem the omniscient god solved but it was too slow (it works tho!!). Can you help?
+
+{{main.url}}
+
+Don't forget to orz larry!
+
+You are supposed to optimize the provided solution given in `lib.rs` to complete the problem in the given memory and time constraints.
+"""
+provide = ["./Cargo.lock", "./Cargo.toml", "./src/main.rs", "./src/lib.rs", "./Dockerfile"]
+
+[flag]
+file = "flag.txt"
+
+[containers.main]
+build = "."
+limits = { cpu = 1, mem = 256 }
+
+[expose.main]
+tcp = 1412
+target = 5000

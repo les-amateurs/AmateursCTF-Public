@@ -1,0 +1,22 @@
+name = "zig-jail-1"
+author = "unvariant"
+description = """
+This isn't c anymore you can't just `#include` the flag right?
+
+{{chal.url}}
+"""
+provide = [ "./chal.py", "./zig-linux-x86_64-0.11.0.tar.xz", "./run.sh", "./chroot.sh", "./hook.sh", "Dockerfile"]
+
+flag = "amateursCTF{better_way_of_including_c_files}"
+
+[containers.chal]
+build = "."
+ports = [ 5000,]
+
+[expose.chal]
+target = 5000
+tcp = 1515
+
+[containers.chal.limits]
+cpu = 1
+mem = 256

@@ -1,0 +1,1 @@
+amateursCTF{who_said_the_interpreter_has_to_be_the_linker}

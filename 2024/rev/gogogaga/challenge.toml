@@ -1,0 +1,24 @@
+id = "gogogaga"
+name = "gogogaga"
+author = "flocto"
+description = """
+\"wow its my favorite language to rev\" - nobody
+
+{{main.url}}
+"""
+provide = [ "./main"]
+
+[flag]
+file = "./flag.txt"
+
+[expose.main]
+target = 5000
+tcp = 2200
+
+[containers.main]
+build = "."
+ports = [ 5000,]
+
+[containers.main.limits]
+cpu = 1
+mem = 256

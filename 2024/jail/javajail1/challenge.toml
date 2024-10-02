@@ -1,0 +1,19 @@
+name = "javajail1"
+author = "flocto"
+description = "Good luck getting anything to run.\n\n{{main.url}}"
+provide = [ "./main.py",]
+
+[flag]
+file = "./flag.txt"
+
+[expose.main]
+target = 5000
+tcp = 2103
+
+[containers.main]
+build = "."
+ports = [ 5000,]
+
+[containers.main.limits]
+cpu = 1
+mem = 256

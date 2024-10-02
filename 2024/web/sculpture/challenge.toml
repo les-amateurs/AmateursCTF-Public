@@ -1,0 +1,11 @@
+name = "sculpture"
+author = "smashmaster"
+description = """
+Client side rendered python turtle sculptures, why don't we play around with them.
+
+Remote (for use in admin bot): [https://amateurs-ctf-2024-sculpture-challenge.pages.dev](https://amateurs-ctf-2024-sculpture-challenge.pages.dev)
+[Admin Bot](http://admin-bot.amt.rs/sculpture)  
+
+"""
+provide = [ "index.html", "admin-bot-excerpt.js" ]
+flag = "amateursCTF{i_l0v3_wh3n_y0u_can_imp0rt_xss_v3ct0r}"

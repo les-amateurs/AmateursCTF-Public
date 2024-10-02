@@ -1,0 +1,23 @@
+name = "baby-elfcrafting"
+author = "unvariant"
+description = """
+Can you run an executable without any code in it?
+
+{{chal.url}}
+"""
+provide = [ "./dist.tar.xz",]
+
+[flag]
+file = "chal/flag.txt"
+
+[containers.chal]
+build = "./chal"
+ports = [ 5000,]
+
+[expose.chal]
+target = 5000
+tcp = 1366
+
+[containers.chal.limits]
+cpu = 1
+mem = 256

@@ -1,0 +1,24 @@
+name: CHAL_NAME
+author: unvariant
+description: |-
+  CHAL_DESCRIPTION
+
+flag:
+  file: ./chal/flag.txt
+
+provide:
+  - ./dist.tar.xz
+
+containers:
+  main:
+    build: ./chal
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: CHAL_PORT

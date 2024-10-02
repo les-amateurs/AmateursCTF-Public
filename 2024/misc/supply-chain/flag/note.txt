@@ -1,0 +1,5 @@
+Thanks Gynvael for the great guide.
+https://gynvael.coldwind.pl/?lang=en&id=782
+
+Also xz.tukaani.org/ got taken down since it was hosted on Github Pages LOL!
+https://web.archive.org/web/20240328130102/https://xz.tukaani.org/format/xz-file-format.txt

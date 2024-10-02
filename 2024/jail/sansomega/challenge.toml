@@ -1,0 +1,19 @@
+name = "sansomega"
+author = "flocto"
+description = "Somehow I think the pico one had too many unintendeds...\n\nSo I left some more in :)\n\n{{main.url}}"
+provide = [ "./shell.py", "./Dockerfile",]
+
+[flag]
+file = "./flag.txt"
+
+[expose.main]
+target = 5000
+tcp = 2100
+
+[containers.main]
+build = "."
+ports = [ 5000,]
+
+[containers.main.limits]
+cpu = 1
+mem = 256

@@ -1,0 +1,9 @@
+name = "less-suspicious-rsa"
+author = "hellopir2"
+description = """
+I need help factoring this modulus, it looks less suspicious, but I can't factor using any conventional methods.
+"""
+provide = [ "./output.txt", "./less-suspicious-rsa.py",]
+
+[flag]
+file = "flag.txt"

@@ -1,0 +1,8 @@
+id = "cplusplus"
+name = "cplusplus"
+author = "flocto"
+description = "idk why everyone keeps telling me to use c++? c is just as good."
+provide = [ "./cplusplus", "./output.txt",]
+
+[flag]
+file = "./flag.txt"

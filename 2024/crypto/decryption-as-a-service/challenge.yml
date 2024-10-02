@@ -1,0 +1,23 @@
+name: decryption-as-a-service
+author: hellopir2
+description: |-
+    Hi, please do not decrypt the flag. Or anything else, for that matter...
+
+flag: amateursCTF{wtf_why_is_this_rsa_but_you_dont_provide_public_key_this_isnt_how_rsa_works?!?!_0b8ee05d}
+
+provide: 
+    - ./decryption-as-a-service.py
+
+containers:
+  main:
+    build: .
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: 1417

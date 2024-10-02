@@ -1,0 +1,23 @@
+name: faked-onion
+author: hellopir2
+description: |-
+    Are you as fake as this onion?
+
+flag: amateursCTF{oh_no_my_one_of_a_kind-err_sorry,_f4ked_on10n_cipher_got_ki11ed_730eb1c0}
+
+provide: 
+    - ./faked-onion.py
+
+containers:
+  main:
+    build: .
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: 1414

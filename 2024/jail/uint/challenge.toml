@@ -1,0 +1,19 @@
+name = "uint"
+author = "hellopir2"
+description = """
+Quasar wrote an implementation of uint or something, please abuse my usage of it.
+
+{{main.url}}
+"""
+provide = [ "./server.py"]
+
+[flag]
+file = "flag.txt"
+
+[containers.main]
+build = "."
+limits = { cpu = 1, mem = 256 }
+
+[expose.main]
+tcp = 1435
+target = 5000

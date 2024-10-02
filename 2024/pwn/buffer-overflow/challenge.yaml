@@ -1,0 +1,26 @@
+name: BUFFER-OVERFLOW
+author: unvariant
+description: |-
+  I just want to uppercase a string... why does unicode make this so hard.
+
+  `{{nc}}`
+
+flag:
+  file: ./chal/flag.txt
+
+provide:
+  - ./dist.tar.xz
+
+containers:
+  main:
+    build: ./chal
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: CHAL_PORT

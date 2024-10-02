@@ -1,0 +1,46 @@
+<%= if @current_user do %>
+  <.simple_form :let={f} for={@changeset} id="login_form" action={~p"/post"} class="mb-16">
+    <.input field={f[:content]} type="textarea" label="What's Up?" rows="10" required />
+    <:actions>
+      <.button>
+        Post
+      </.button>
+    </:actions>
+  </.simple_form>
+<% else %>
+  <div class="grid grid-cols-1 grid-rows-1">
+    <.simple_form for={nil} class="col-start-1 row-start-1 mb-16">
+      <.input type="textarea" name="lol" value="" label="What's Up?" rows="10" disabled />
+      <:actions>
+        <.button>
+          Post
+        </.button>
+      </:actions>
+    </.simple_form>
+    <div class="grid items-center justify-center w-full h-full col-start-1 row-start-1 bg-white/75">
+      <h1 class="text-4xl font-bold">Login To post</h1>
+    </div>
+  </div>
+<% end %>
+
+<%= if length(@posts) == 0 do %>
+  <div>
+    <h1 class="mb-1 text-3xl font-extrabold text-center">Nothing is here.</h1>
+    <p class="text-xl text-center text-gray-700">
+      Browse the <.link href={~p"/?all"} class="text-blue-600">global feed</.link>
+      and follow<br />someone, or make a post of your own.
+    </p>
+  </div>
+<% else %>
+  <%= for post <- @posts do %>
+    <div class="px-3 py-4 border-b">
+      <div class="mb-1">
+        <a class="font-bold lg" href={~p"/@/#{post.author.username}"}>
+          @<%= post.author.username %>
+        </a>
+        <span class="text-gray-500"><%= post.inserted_at %></span>
+      </div>
+      <p class="text-xl"><%= post.content %></p>
+    </div>
+  <% end %>
+<% end %>

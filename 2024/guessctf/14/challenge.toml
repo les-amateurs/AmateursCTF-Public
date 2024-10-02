@@ -1,0 +1,17 @@
+name = "meow"
+author = "meow"
+description = "meow"
+provide = []
+flag = "meow"
+hidden = true
+
+[containers.chal]
+build = "."
+
+[expose.chal]
+target = 8000
+http = "guessctf-level-14"
+
+[containers.chal.limits]
+cpu = 1
+mem = 256

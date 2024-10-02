@@ -1,0 +1,3 @@
+const flag =
+    \\amateursCTF{better_way_of_including_c_files}
+;

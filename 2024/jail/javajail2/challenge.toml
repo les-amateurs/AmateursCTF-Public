@@ -1,0 +1,19 @@
+name = "javajail2"
+author = "flocto"
+description = "okay sorry here's a real jail.\n\n{{main.url}}"
+provide = [ "./main.py",]
+
+[flag]
+file = "./flag.txt"
+
+[expose.main]
+target = 5000
+tcp = 2104
+
+[containers.main]
+build = "."
+ports = [ 5000,]
+
+[containers.main.limits]
+cpu = 1
+mem = 256

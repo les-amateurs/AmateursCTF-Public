@@ -1,0 +1,19 @@
+name = "buffer-overflow"
+author = "unvariant"
+description = "I just want to uppercase a string... why does unicode make this so hard.\n\n{{chal.url}}"
+provide = [ "./dist.tar.xz",]
+
+[flag]
+file = "chal/flag.txt"
+
+[containers.chal]
+build = "./chal"
+ports = [ 5000,]
+
+[expose.chal]
+target = 5000
+tcp = 1337
+
+[containers.chal.limits]
+cpu = 1
+mem = 256

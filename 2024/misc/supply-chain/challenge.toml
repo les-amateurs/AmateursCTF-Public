@@ -1,0 +1,7 @@
+name = "supply-chain"
+author = "flocto"
+description = "help my flag got supply chain attacked :(("
+provide = [ "./bad-3-corrupt_flag.tar.xz",]
+
+[flag]
+file = "./flag.txt"

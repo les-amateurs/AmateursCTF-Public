@@ -1,0 +1,8 @@
+hostname = "amt.rs"
+
+[fly]
+org = "amateursctf-2024"
+app_name = "amateursctf-2024"
+
+[rctf]
+url = "https://ctf.amateurs.team"

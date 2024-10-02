@@ -1,0 +1,5 @@
+__pycache__
+# you don't want to know.
+corpus
+backup.zip
+*.jsonl

@@ -1,0 +1,7 @@
+name = "bears-flagcord"
+author = "smashmaster"
+description = """
+We're building the next generation flag sharing social media inside discord! Join us for the fun flag sharing activity, well uhm actually I might need to finish testing my code. Use code "flag" to get instant access to the flag! `https://discord.com/oauth2/authorize?client_id=1223421353907064913&permissions=0&scope=bot`
+"""
+
+flag = "amateursCTF{p0v_ac3ss_c0ntr0l_bypass_afd6e94d}"

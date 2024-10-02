@@ -1,0 +1,13 @@
+name = "revtale-2"
+author = "smashmaster"
+description = """
+However... I have a&  difficult request to ask&  of you.\n
+...\n
+I would like you to walk&  to the end of the room by yourself.\n
+Forgive me for this.\n
+\n
+- Toriel
+"""
+
+flag = "amateursCTF{d0_y0u_pr3f3r_butt3rsc0tch_0r_c1nnam0n?}"
+provide = ["revtale-2.zip"]

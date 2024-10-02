@@ -1,0 +1,23 @@
+name = "decryption-as-a-service"
+author = "hellopir2"
+description = """
+Hi, please do not decrypt the flag. Or anything else, for that matter...
+
+{{chal.url}}
+"""
+provide = [ "./decryption-as-a-service.py"]
+
+[flag]
+file = "flag.txt"
+
+[containers.chal]
+build = "."
+ports = [ 5000,]
+
+[expose.chal]
+target = 5000
+tcp = 1417
+
+[containers.chal.limits]
+cpu = 1
+mem = 512

@@ -1,0 +1,19 @@
+name = "pyquinejailgolf"
+author = "hellopir2"
+description = """
+What about a quine?
+
+{{main.url}}
+"""
+provide = [ "./main.py"]
+
+[flag]
+file = "flag.txt"
+
+[containers.main]
+build = "."
+limits = { cpu = 1, mem = 256 }
+
+[expose.main]
+tcp = 1818
+target = 5000

@@ -1,0 +1,19 @@
+name = "reflection"
+author = "unvariant"
+description = "Do you know what ret2dlresolve is?\n\n{{chal.url}}"
+provide = [ "./dist.tar.xz",]
+
+[flag]
+file = "chal/flag.txt"
+
+[containers.chal]
+build = "./chal"
+ports = [ 5000,]
+
+[expose.chal]
+target = 5000
+tcp = 1344
+
+[containers.chal.limits]
+cpu = 1
+mem = 256

@@ -1,0 +1,10 @@
+name: ecsuses
+author: hellopir2
+description: |-
+    Was last year's excuse-me not crypto enough for you? I hope this one satisfies those who complained.
+
+flag: amateursCTF{ba90253f8d2e25ef248c8a53bb339ae6b9a6646c66d3daecad5afd8e22c9643c10183f27c56efac917cdf83b2b62913d0e78689728e7aff5b1d71a9030f6d2002574f14d44991619b2910adef9dd2c94}
+
+provide: 
+    - ./ecsuses.py
+    - ./flagtxt

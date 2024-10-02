@@ -1,0 +1,1 @@
+-mbypass-cache -mno-cache-volatile -mno-hw-mul -mno-hw-mulx -mno-hw-div

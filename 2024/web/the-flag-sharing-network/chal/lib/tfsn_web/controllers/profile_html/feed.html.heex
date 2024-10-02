@@ -1,0 +1,62 @@
+<.back navigate={~p"/"}>Back to feed</.back>
+
+<%= if @current_user do %>
+  <%= cond do %>
+    <% @current_user.id == @user.id -> %>
+      <.button
+        class="float-right mt-4 bg-[white!important] border-[black!important] border text-[black!important]"
+        disabled
+      >
+        This is you!
+      </.button>
+    <% Tfsn.Accounts.is_following?(@current_user, @user) -> %>
+      <.link href={~p"/@/#{@user.username}/unfollow"}>
+        <.button class="float-right mt-4 bg-[white!important] border-[black!important] border text-[black!important]">
+          Unfollow
+        </.button>
+      </.link>
+    <% true -> %>
+      <.link href={~p"/@/#{@user.username}/follow"}>
+        <.button class="float-right mt-4">Follow</.button>
+      </.link>
+  <% end %>
+<% end %>
+<h1 class="mb-2 text-6xl font-black">@<%= @user.username %></h1>
+<h1 class="mb-16 text-gray-500">
+  <%= length(@posts) %> flag<%= if length(@posts) != 1 do %>s
+  <% end %>
+  shared
+</h1>
+
+<div class="grid grid-cols-3">
+  <.link
+    class="text-[0.8125rem] text-center border-b-2 py-2 border-zinc-900 leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
+    href={~p"/@/#{@user.username}"}
+  >
+    Posts
+  </.link>
+  <.link
+    class="text-[0.8125rem] text-center border-b-2 py-2 leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
+    href={~p"/@/#{@user.username}/following"}
+  >
+    Following
+  </.link>
+  <.link
+    class="text-[0.8125rem] text-center border-b-2 py-2 leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
+    href={~p"/@/#{@user.username}/followers"}
+  >
+    Followers
+  </.link>
+</div>
+
+<%= for post <- @posts do %>
+  <div class="px-3 py-4 border-b">
+    <div class="mb-1">
+      <a class="font-bold lg" href={~p"/@/#{post.author.username}"}>
+        @<%= post.author.username %>
+      </a>
+      <span class="text-gray-500"><%= post.inserted_at %></span>
+    </div>
+    <p class="text-xl"><%= post.content %></p>
+  </div>
+<% end %>

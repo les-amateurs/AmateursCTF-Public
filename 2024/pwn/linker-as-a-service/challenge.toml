@@ -1,0 +1,19 @@
+name = "linker-as-a-service"
+author = "unvariant"
+description = "Turing complete relocations are fun and all, but you can use them to pop a shell?\n\n{{chal.url}}"
+provide = [ "./dist.tar.xz",]
+
+[flag]
+file = "chal/flag.txt"
+
+[containers.chal]
+build = "./chal"
+ports = [ 5000,]
+
+[expose.chal]
+target = 5000
+tcp = 1342
+
+[containers.chal.limits]
+cpu = 1
+mem = 256

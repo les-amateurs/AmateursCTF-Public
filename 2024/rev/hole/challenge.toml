@@ -1,0 +1,8 @@
+id = "hole"
+name = "hole"
+author = "flocto"
+description = "🕳️"
+provide = [ "./Elixir.Program.beam", "./enc.txt", "./code.🕳️"]
+
+[flag]
+file = "./flag.txt"

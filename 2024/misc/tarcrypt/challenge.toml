@@ -1,0 +1,7 @@
+name = "tarcrypt"
+author = "hellopir2"
+description = "you guys wanted forensics, i wanted to tar files."
+provide = [ "./zf.py", "./flag.tarc"]
+
+[flag]
+file = "./flag.txt"

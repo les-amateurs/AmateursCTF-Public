@@ -1,0 +1,23 @@
+name: pilfer-techies
+author: hellopir2
+description: |-
+    Uh, I modified the fake onion and now it's hoarding flags with an unreversable cipher?? Please pilfer them for me.
+
+flag: amateursCTF{i_love_cycles_4nd_cycl3s_anD_cYcl3s_AND_cyCLEs_aNd_cyc135_4319d671}
+
+provide: 
+    - ./pilfer-techies.py
+
+containers:
+  main:
+    build: .
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: 1415

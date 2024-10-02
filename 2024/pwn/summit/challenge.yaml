@@ -1,0 +1,28 @@
+name: summit
+author: unvariant
+description: |-
+  Turns out I lied last year :P
+
+  Can you golf an even smaller x64 elf file?
+
+  `{{nc}}`
+
+flag:
+  file: ./chal/flag.txt
+
+provide:
+  - ./dist.tar.xz
+
+containers:
+  main:
+    build: ./chal
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: CHAL_PORT

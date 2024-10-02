@@ -1,0 +1,9 @@
+name = "bathroom-break"
+author = "hellopir2"
+description = """
+I was on an in-state skiing trip with my family when we decided to go out and see some sights. I remember needing to go to the bathroom near where these pictures were taken and then leaving a review. Can you find this review for me?
+"""
+provide = [ "./493B0E69-C226-4171-B565-2E68ECF25A29.jpg", "./67BC754A-C818-4358-8E4F-16DF8B2230E8.jpg"]
+
+[flag]
+file = "flag.txt"

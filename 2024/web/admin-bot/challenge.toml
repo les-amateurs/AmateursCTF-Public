@@ -1,0 +1,13 @@
+name = "admin-bot"
+author = "les amateurs"
+description = "admin bot"
+flag = ""
+hidden = true
+
+[containers.main]
+build = "."
+limits = { cpu = 2, mem = 512 }
+
+[expose.main]
+target = 8080
+http = "admin-bot"

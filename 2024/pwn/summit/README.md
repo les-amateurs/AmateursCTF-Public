@@ -1,0 +1,1 @@
+find/craft 73 byte elf (from tmpout.sh)

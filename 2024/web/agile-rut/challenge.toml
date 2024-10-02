@@ -1,0 +1,17 @@
+name = "agile-rut"
+author = "voxal"
+description = """
+  check out this cool font i made!  
+  {{main.url}}  
+  hint: if you get something that looks like the flag try pasting it into the box.
+"""
+
+flag = "amateursctf{0k_but_1_dont_like_the_jbmon0_===}"
+
+[containers.main]
+build = "."
+limits = { cpu = 1, mem = 256 }
+
+[expose.main]
+target = 3000
+http = "agile-rut"

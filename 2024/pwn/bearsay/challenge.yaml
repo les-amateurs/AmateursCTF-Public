@@ -1,0 +1,28 @@
+name: bearsay
+author: unvariant
+description: |-
+  bearsay(1)
+  
+  bearsay - configurable speaking/thinking bear (and a bit more)
+
+  `{{nc}}`
+
+flag:
+  file: ./chal/flag.txt
+
+provide:
+  - ./dist.tar.xz
+
+containers:
+  main:
+    build: ./chal
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: CHAL_PORT

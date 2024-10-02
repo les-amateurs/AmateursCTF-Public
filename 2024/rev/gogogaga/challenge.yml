@@ -1,0 +1,25 @@
+id: gogogaga
+name: gogogaga
+author: flocto
+description: |-
+  "wow its my favorite language to rev" - nobody
+
+flag:
+ file: ./flag.txt
+
+provide:
+ - ./main
+
+containers:
+  main:
+    build: .
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: 22002

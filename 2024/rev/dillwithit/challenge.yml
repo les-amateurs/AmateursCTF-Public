@@ -1,0 +1,13 @@
+id: dillwithit
+name: dill-with-it
+author: flocto
+description: |-
+  Crisp green Larry lies
+  Bathes, brining in vinegar
+  Dill pickle delight
+
+flag:
+ file: ./flag.txt
+
+provide:
+ - ./main.py

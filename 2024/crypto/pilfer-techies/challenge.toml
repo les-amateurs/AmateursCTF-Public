@@ -1,0 +1,23 @@
+name = "pilfer-techies"
+author = "hellopir2"
+description = """
+Uh, I modified the fake onion and now it's hoarding flags with an unreversable cipher?? Please pilfer them for me.
+
+{{chal.url}}
+"""
+provide = [ "./pilfer-techies.py",]
+
+[flag]
+file = "flag.txt"
+
+[containers.chal]
+build = "."
+ports = [ 5000,]
+
+[expose.chal]
+target = 5000
+tcp = 1415
+
+[containers.chal.limits]
+cpu = 2
+mem = 512

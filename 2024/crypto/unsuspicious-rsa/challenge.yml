@@ -1,0 +1,10 @@
+name: unsuspicious-rsa
+author: hellopir2
+description: |-
+    I need help factoring this modulus, it looks suspicious, but I can't factor using any conventional methods.
+
+flag: amateursCTF{here's_the_flag_you_requested.}
+
+provide: 
+    - ./output.txt
+    - ./unsuspicious-rsa.py

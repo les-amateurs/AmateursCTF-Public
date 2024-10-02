@@ -1,0 +1,11 @@
+id: flagpatch
+name: flagpatch
+author: flocto
+description: |-
+  i've been trying to apply this delta, but larry messed with my hash :(. can someone help me with this?
+
+flag:
+ file: ./flag.txt
+
+provide:
+ - ./patch.exe

@@ -1,0 +1,9 @@
+name: densely-packed
+author: smashmaster
+description: |-
+    You can make anything sound like laughing if you try hard enough with an imagination. mus_smile
+
+provide: 
+    - ./laughing.wav
+
+flag: amateursCTF{inverse_transformations}

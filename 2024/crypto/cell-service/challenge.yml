@@ -1,0 +1,10 @@
+name: cell-service
+author: hellopir2
+description: |-
+    The signal I'm getting up here is unfathomably bad, and I think that's why my flag is taking so long to decode. Can you help?
+
+flag: amateursCTF{3xponents_4re_cool_or_s0mething?!?_4d767c85f66f530c}
+
+provide: 
+    - ./cell-service.py
+    - ./out.zip

@@ -1,0 +1,1 @@
+amateursCTF{why_not_just_rewrite_everything_in_c}

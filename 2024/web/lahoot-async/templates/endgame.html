@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %} You did it! {% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container">
+      <h1 class="title">
+        You did it!
+      </h1>
+      <p class="subtitle">
+        {{ endgame_data["message"] }}
+      </p>
+
+    </div>
+    <div class="container">
+      <div class = "content">
+        Your accuracy was a {{ endgame_data["accuracy"] }}%.
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th><abbr title="Position">Pos</abbr></th>
+            <th>Username</th>
+            <th><abbr title="Played">Points</abbr></th>
+            <th>Favorite Category</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th><abbr title="Position">Pos</abbr></th>
+            <th>Username</th>
+            <th><abbr title="Played">Points</abbr></th>
+            <th>Favorite Category</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          {% for user in leaderboard %}
+          <tr>
+            <th>{{ loop.index }}</th>
+            <td>
+              {{ user[0] }}
+            </td>
+            <td>{{ user[1] }}</td>
+            <td>Unknown</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+{% endblock %}

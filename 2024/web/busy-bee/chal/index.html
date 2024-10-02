@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js"
+        integrity="sha512-8RnEqURPUc5aqFEN04aQEiPlSAdE0jlFS/9iGgUyNtwFnSKCXhmB6ZTNl7LnDtDWKabJIASzXrzD0K+LYexU9g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css"
+        integrity="sha512-uf06llspW44/LZpHzHT6qBOIVODjWtv4MxCricRxkzvopAlSWnTf6hpZTFxuuZcuNE9CBQhqE0Seu1CoRk84nQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/javascript/javascript.min.js"
+        integrity="sha512-I6CdJdruzGtvDyvdO4YsiAq+pkWf2efgd1ZUSK2FnM/u2VuRASPC7GowWQrWyjxCZn6CT89s3ddGI+be0Ak9Fg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/ayu-dark.min.css"
+        integrity="sha512-mV3RUXi1gt22jDb4UyRBFhZVFgAIiOfRE6ul+2l1Hcj6glyg6x4xlnjPH+neGm/t6XrFmsMRu4++McQu0asjqg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/index.js" type="module"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .CodeMirror {
+            height: 100%;
+        }
+    </style>
+    <title>worker bee!!</title>
+</head>
+
+<body class="overflow-hidden">
+    <p class="text-yellow-500"></p>
+    <p class="text-red-500"></p>
+    <div class="grid grid-rows-2">
+        <div class="grid grid-cols-2 items-center w-full m-auto">
+            <div class="bg-green-800 items-center justify-items-center grid grid-cols-[2rem_1fr_8rem]">
+                <div
+                    class="w-8 h-full bg-gradient-to-b from-yellow-800 to-yellow-600 border-2 border-black flex items-end rounded-full overflow-hidden">
+                    <div class="bg-yellow-500 w-8 h-0 transition duration-1000" id="honeyBar">
+                        <p class="relative font-mono text-xs text-center" id="honeyBarText">0 / 2</p>
+                    </div>
+                </div>
+                <canvas id="canvas" class="aspect-square" width="640" height="640"></canvas>
+                <div class="h-fit mb-auto z-10" id="controls">
+                    <button
+                        class="bg-green-400 hover:bg-green-500 active:translate-y-0.5 transition w-full h-16">Play</button>
+                    <button
+                        class="bg-blue-400 hover:bg-blue-500 active:translate-y-0.5 transition w-full h-16">Tick</button>
+                    <button
+                        class="bg-orange-400 hover:bg-orange-500 active:translate-y-0.5 transition w-full h-16">Save</button>
+                    <button
+                        class="bg-yellow-400 hover:bg-yellow-500 active:translate-y-0.5 transition w-full h-16">Share</button>
+                    <button
+                        class="bg-red-400 hover:bg-red-500 active:translate-y-0.5 transition w-full h-16 rounded-bl-lg rounded-br-lg">Reset</button>
+                </div>
+            </div>
+            <textarea id="editor"></textarea>
+        </div>
+
+        <div class="bg-black font-mono text-white p-4 [&>*]:block overflow-y-scroll h-[calc(100vh-640px)]" id="log">
+            <p>&gt; Welcome to Busy Bee!</p>
+            <p>&gt; Your objective is to write a bot that delivers honey from the flowers to the hive.</p>
+            <p>&gt; Your bot can return 1 of 5 actions</p>
+            <p>&nbsp;&nbsp; U - move up</p>
+            <p>&nbsp;&nbsp; D - move down</p>
+            <p>&nbsp;&nbsp; L - move left</p>
+            <p>&nbsp;&nbsp; R - move right</p>
+            <p>&nbsp;&nbsp; I - interact</p>
+            <p>&gt; Navigate to the flower and have your worker bees interact with flowers to gain honey. Growing
+                flowers (semi-transparent) reward 1 honey, fully grown flowers (after 7 ticks from spawning) reward 2
+                instead.</p>
+            <p>&gt; Your worker bees can only hold 3 honey at a time. Any extra will be discarded.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

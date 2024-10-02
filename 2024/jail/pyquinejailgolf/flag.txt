@@ -1,0 +1,1 @@
+amateursCTF{what_is_a_quine_is_that_like_a_reversed_reverse_quine?}

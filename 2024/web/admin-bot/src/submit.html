@@ -1,0 +1,82 @@
+<!doctype html>
+<title>{{ challenge_name }} Admin Bot</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  * {
+    color: #eee;
+    font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+    box-sizing: border-box;
+  }
+  html, body {
+    margin: 0;
+    height: 100%;
+    background: #18181c;
+  }
+  form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 600px;
+    background: #08080c;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
+  }
+  h2 {
+    margin-top: 0;
+  }
+  input, button {
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+  }
+  input {
+    background: #18181c;
+    color: #eee;
+    border: 1px #eee solid;
+    margin-bottom: 30px;
+  }
+  button {
+    background: #eee;
+    color: #18181c;
+    border: 0;
+    cursor: pointer;
+    transition: background ease-in-out 0.2s;
+  }
+  button:hover {
+    background: #bbb;
+  }
+</style>
+<form id="form" method="POST">
+  <h2>{{ challenge_name }} Admin Bot</h2>
+  <p>{{ msg }}</p>
+  <label>
+    URL
+    <input type="text" name="url" autofocus required placeholder="https://example.com" value="{{ url }}">
+  </label>
+  {{ #recaptcha_site }}
+    <input type="hidden" name="recaptcha_code" id="recaptcha_code">
+  {{ /recaptcha_site }}
+  <button type="submit">Submit</button>
+</form>
+{{ #recaptcha_site }}
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script>
+    grecaptcha.ready(function () {
+      grecaptcha.render({
+        theme: 'dark',
+        sitekey: '{{ . }}',
+        callback: function (token) {
+          document.getElementById('recaptcha_code').value = token
+          form.submit()
+        }
+      })
+    })
+    document.getElementById('form').addEventListener('submit', function (evt) {
+      evt.preventDefault()
+      grecaptcha.execute()
+    })
+  </script>
+{{ /recaptcha_site }}

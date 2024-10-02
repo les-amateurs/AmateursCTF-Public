@@ -1,0 +1,6 @@
+name = "revtale-1"
+author = "smashmaster"
+description = "Once upon a time...there was a binary with a flag."
+
+flag = "amateursCTF{ggez_w3_l0v3_vm_b33f}"
+provide = ["revtale-1.zip"]

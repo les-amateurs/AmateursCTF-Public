@@ -1,0 +1,71 @@
+<.back navigate={~p"/"}>Back to feed</.back>
+
+<%= if @current_user do %>
+  <%= cond do %>
+    <% @current_user.id == @user.id -> %>
+      <.button
+        class="float-right mt-4 bg-[white!important] border-[black!important] border text-[black!important]"
+        disabled
+      >
+        This is you!
+      </.button>
+    <% Tfsn.Accounts.is_following?(@current_user, @user) -> %>
+      <.link href={~p"/@/#{@user.username}/unfollow"}>
+        <.button class="float-right mt-4 bg-[white!important] border-[black!important] border text-[black!important]">
+          Unfollow
+        </.button>
+      </.link>
+    <% true -> %>
+      <.link href={~p"/@/#{@user.username}/follow"}>
+        <.button class="float-right mt-4">Follow</.button>
+      </.link>
+  <% end %>
+<% end %>
+<h1 class="mb-2 text-6xl font-black">@<%= @user.username %></h1>
+<h1 class="mb-16 text-gray-500">
+  <%= length(@followers) %> user<%= if length(@followers) != 1 do %>s
+  <% end %>
+  following
+</h1>
+
+<div class="grid grid-cols-3">
+  <.link
+    class="text-[0.8125rem] text-center border-b-2 py-2 leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
+    href={~p"/@/#{@user.username}"}
+  >
+    Posts
+  </.link>
+  <.link
+    class="text-[0.8125rem] text-center border-b-2 py-2 leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
+    href={~p"/@/#{@user.username}/following"}
+  >
+    Following
+  </.link>
+  <.link
+    class="text-[0.8125rem] text-center border-b-2 py-2 border-zinc-900 leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
+    href={~p"/@/#{@user.username}/followers"}
+  >
+    Followers
+  </.link>
+</div>
+<div class="flex justify-end gap-2 mt-2">
+  <span>Sort By:</span>
+  <.link
+    class="px-2 bg-gray-200 rounded-lg"
+    href={~p"/@/#{@user.username}/followers?sort=username"}
+  >
+    name
+  </.link>
+  <.link
+    class="px-3 bg-gray-200 rounded-lg"
+    href={~p"/@/#{@user.username}/followers?sort=inserted_at"}
+  >
+    account age
+  </.link>
+</div>
+
+<%= for follow <- @followers do %>
+  <.link class="block px-3 py-4 border-b" href={~p"/@/#{follow.username}"}>
+    <h3 class="text-xl font-bold">@<%= follow.username %></h3>
+  </.link>
+<% end %>

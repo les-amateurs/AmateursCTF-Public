@@ -1,0 +1,1 @@
+amateursCTF{surely_there_arent_any_more_ways_to_make_syscalls_right}

@@ -1,0 +1,26 @@
+name = "the-flag-sharing-network"
+author = "voxal"
+description = """amateursCTF is too hard :( so i made this website for people to share their flags. 
+i made my favorite flag my password though, but i made my app so secure there is no way you steal it. (@/admin)
+{{main.url}}
+
+***Note: DO NOT ACTUALLY SHARE FLAGS***
+"""
+
+provide = [{ dir = "./chal", as = "tfsn" }]
+
+flag = "amateursCTF{i_l0v3_sort1ng_thing5}"
+
+[containers.main]
+build = "./chal"
+limits = { cpu = 1, mem = 256 }
+[containers.main.env]
+SECRET_KEY_BASE = "Nxih1d/l9J2RElkU0x0j4lPG4IJtNddWI0JU1Vvsg4ARwDZqB2TuEXQGfMPlOpwV"
+DATABASE_URL = "ecto://postgres:gV7DJsEtMgiiReu@amateursctf-2024-tfsn-pg.internal:5432/tfsn"
+PHX_HOST = "tfsn.amt.rs"
+ECTO_IPV6 = "1"
+
+
+[expose.main]
+target = 4000
+http = "tfsn"

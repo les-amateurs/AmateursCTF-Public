@@ -1,0 +1,8 @@
+id = "typo"
+name = "typo"
+author = "flocto"
+description = "can you make sure i didn't make a typo?"
+provide = [ "./mian.py", "./output.txt",]
+
+[flag]
+file = "./flag.txt"

@@ -1,0 +1,13 @@
+**/*.bin
+**/*.dump
+**/*.DS_Store
+**/*.o
+**/*.bin
+**/*.elf
+__pycache__/
+zig-cache/
+zig-out/
+target/
+a.py
+.env
+bear-cds

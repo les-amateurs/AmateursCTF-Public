@@ -1,0 +1,19 @@
+name = "summit"
+author = "unvariant"
+description = "Turns out I lied last year.\n\nCan you golf an even smaller x64 elf file?\n\nhint: have you tried using `ET_DYN` yet?\n\n{{chal.url}}"
+provide = [ "./dist.tar.xz",]
+
+[flag]
+file = "chal/flag.txt"
+
+[containers.chal]
+build = "./chal"
+ports = [ 5000,]
+
+[expose.chal]
+target = 5000
+tcp = 1345
+
+[containers.chal.limits]
+cpu = 1
+mem = 256

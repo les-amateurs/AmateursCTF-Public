@@ -1,0 +1,19 @@
+name = "creative-login-page-challenge"
+author = "voxal"
+description = """
+  i ran out of ideas so here is a login page challenge  
+  {{main.url}}
+"""
+
+flag = "amateursCTF{1_l0v3_l0gin_pAges}"
+provide = ["src/main/java/team/amateurs/loginpage/LoginpageApplication.java"]
+
+[containers.main]
+build = "."
+limits.cpu = 1
+limits.mem = 256
+env.FLAG = "amateursCTF{1_l0v3_l0gin_pAges}"
+
+[expose.main]
+target = 8080
+http = "creative-login-page"

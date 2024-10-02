@@ -1,0 +1,19 @@
+name = "baby-bear-blockchain"
+author = "unvariant"
+description = "Don't you love it when people take perfectly functional rust projects and rewrite them in c?\n\n{{chal.url}}"
+provide = [ "./dist.tar.xz",]
+
+[flag]
+file = "chal/flag.txt"
+
+[containers.chal]
+build = "./chal"
+ports = [ 5000,]
+
+[expose.chal]
+target = 5000
+tcp = 1340
+
+[containers.chal.limits]
+cpu = 1
+mem = 256

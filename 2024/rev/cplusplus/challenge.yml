@@ -1,0 +1,12 @@
+id: cplusplus
+name: cplusplus
+author: flocto
+description: |-
+  idk why everyone keeps telling me to use c++? c is just as good.
+
+flag:
+ file: ./flag.txt
+
+provide:
+ - ./cplusplus
+ - ./output.txt

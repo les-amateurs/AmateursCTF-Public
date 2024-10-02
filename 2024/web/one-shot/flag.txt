@@ -1,0 +1,9 @@
+<p>amateursCTF{go_union_select_a_life}</p>
+<br />
+<h3>alternative flags (these won't work) (also do not share):</h3>
+<p>
+amateursCTF{UNION_SELECT_life_FROM_grass} <br /> 
+amateursCTF{why_are_you_endorsing_unions_big_corporations_are_better} <br />
+amateursCTF{union_more_like_onion_*cronch*}  <br />
+amateursCTF{who_is_this_Niko_everyone_is_talking_about}
+</p>

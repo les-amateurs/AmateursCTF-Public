@@ -1,0 +1,11 @@
+id: wtf
+name: wtf
+author: flocto
+description: |-
+  wtf happened to my binary wtf is a Altera Nios II.
+
+flag:
+ file: ./flag.txt
+
+provide:
+ - ./main

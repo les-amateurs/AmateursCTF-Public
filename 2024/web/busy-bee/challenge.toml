@@ -1,0 +1,18 @@
+name = "busy-bee"
+author = "voxal"
+description = """
+  write a program to help the bee hive proliferate!  
+  [buzz](https://busy-bee-amateurs-ctf-2024.pages.dev)  
+  [admin bot](http://admin-bot.amt.rs/busy-bee)  
+
+  [admin bot chromium build (117.0.5938.88)](https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/117.0.5938.88/linux64/chrome-linux64.zip)
+"""
+
+provide = ["bot.js"]
+
+flag = "amateursCTF{th3_m0ther_b33_i5_HAPPY}"
+
+[containers.main]
+build = "./chal"
+limits.cpu = 1
+limits.mem = 256

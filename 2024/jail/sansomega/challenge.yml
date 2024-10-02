@@ -1,0 +1,29 @@
+name: sansomega
+author: flocto
+description: |-
+  Somehow I think the pico one had too many unintendeds...
+
+  So I left some more in :)
+
+  `{{nc}}`
+
+flag:
+  file: ./flag.txt
+
+provide:
+  - ./shell.py
+  - ./Dockerfile
+
+containers:
+  main:
+    build: .
+    replicas: 1
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+
+expose:
+  main:
+    - target: 5000
+      tcp: 22001

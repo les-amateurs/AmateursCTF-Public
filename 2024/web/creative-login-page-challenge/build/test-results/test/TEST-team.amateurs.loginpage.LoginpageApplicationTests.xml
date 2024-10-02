@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="team.amateurs.loginpage.LoginpageApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-04T05:20:13" hostname="voxal" time="0.811">
+  <properties/>
+  <testcase name="contextLoads()" classname="team.amateurs.loginpage.LoginpageApplicationTests" time="0.811"/>
+  <system-out><![CDATA[22:20:10.870 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [team.amateurs.loginpage.LoginpageApplicationTests]: LoginpageApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:20:11.016 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration team.amateurs.loginpage.LoginpageApplication for test class team.amateurs.loginpage.LoginpageApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.3)
+
+2024-04-03T22:20:11.615-07:00  INFO 71008 --- [loginpage] [    Test worker] t.a.loginpage.LoginpageApplicationTests  : Starting LoginpageApplicationTests using Java 17.0.10 with PID 71008 (started by voxal in /home/voxal/code/ctf/amateurs-ctf-2024/web/creative-login-page-challenge)
+2024-04-03T22:20:11.617-07:00  INFO 71008 --- [loginpage] [    Test worker] t.a.loginpage.LoginpageApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2024-04-03T22:20:13.409-07:00  INFO 71008 --- [loginpage] [    Test worker] t.a.loginpage.LoginpageApplicationTests  : Started LoginpageApplicationTests in 2.201 seconds (process running for 3.526)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

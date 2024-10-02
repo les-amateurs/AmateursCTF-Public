@@ -1,0 +1,8 @@
+id = "wtf"
+name = "wtf"
+author = "flocto"
+description = "wtf happened to my binary wtf is a Altera Nios II."
+provide = [ "./main", "./main_symbols"]
+
+[flag]
+file = "./flag.txt"

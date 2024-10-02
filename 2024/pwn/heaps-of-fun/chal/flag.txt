@@ -1,0 +1,1 @@
+amateursCTF{did_you_have_fun?}

@@ -1,0 +1,19 @@
+name = "denied"
+author = "voxal"
+description = """
+  what options do i have?  
+  {{main.url}}
+"""
+
+flag = "amateursCTF{s0_m@ny_0ptions...}"
+provide = ["index.js"]
+
+[containers.main]
+build = "."
+limits.cpu = 1
+limits.mem = 256
+env.FLAG = "amateursCTF{s0_m@ny_0ptions...}"
+
+[expose.main]
+target = 3000
+http = "denied"

@@ -1,0 +1,21 @@
+name = "lis"
+author = "skittles1412"
+description = """\
+Oops, I'm failing my interview, how do I get the assertions to pass.
+
+{{main.url}}
+
+Don't forget to orz larry!
+"""
+provide = ["./Dockerfile", "./server.py"]
+
+[flag]
+file = "flag.txt"
+
+[containers.main]
+build = "."
+limits = { cpu = 1, mem = 256 }
+
+[expose.main]
+tcp = 1410
+target = 5000

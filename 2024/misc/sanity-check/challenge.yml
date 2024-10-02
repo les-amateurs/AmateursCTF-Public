@@ -1,0 +1,6 @@
+name: sanity-check
+author: flocto
+description: |-
+    wow sanity check go join the discord.
+
+flag: amateursCTF{free_flag_and_please_follow_the_rules}

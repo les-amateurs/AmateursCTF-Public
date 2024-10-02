@@ -1,0 +1,12 @@
+id: hole
+name: hole
+author: flocto
+description: |-
+  🕳️
+
+flag:
+ file: ./flag.txt
+
+provide:
+ - ./Elixir.Program.beam
+ - ./enc.txt

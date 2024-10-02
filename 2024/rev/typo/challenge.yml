@@ -1,0 +1,12 @@
+id: typo
+name: typo
+author: flocto
+description: |-
+  can you make sure i didn't make a typo?
+
+flag:
+ file: ./flag.txt
+
+provide:
+ - ./mian.py
+ - ./output.txt

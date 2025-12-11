@@ -1,0 +1,18 @@
+{
+  "name": "orange-skies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "admin-bot-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node admin-bot-server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "express": "^5.1.0",
+    "puppeteer": "^24.29.1"
+  }
+}

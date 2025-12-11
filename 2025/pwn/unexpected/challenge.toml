@@ -1,0 +1,19 @@
+id = "pwn-unexpected"
+name = "Unexpected"
+author = "unvariant"
+description = "\"Expect the unexpected\" - someone probably."
+category = "pwn"
+points.min = 50
+points.max = 500
+
+[flag]
+file = "work/flag"
+
+[container.default]
+build = "work/"
+privileged = true
+expose = { 5000 = "tcp" }
+
+[[provide]]
+dir = "dist/"
+as = "unexpected"

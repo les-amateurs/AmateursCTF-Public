@@ -1,0 +1,22 @@
+id = "misc-only-builtins"
+name = "only-builtins"
+author = "cinabun"
+description = ""
+category = "misc"
+points.min = 50
+points.max = 500
+strategy = "instanced"
+visible = true
+
+[flag]
+file = "chall/flag.txt"
+
+[container.default]
+build = "chall/"
+
+[container.default.expose]
+5000 = "tcp"
+
+[[provide]]
+dir = "dist/"
+as = "only-builtins"

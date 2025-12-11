@@ -1,0 +1,23 @@
+id = "web-desafe"
+name = "desafe"
+author = "voxal"
+description = "your feedback is greatly appreciated"
+category = "web"
+strategy = "instanced"
+
+[flag]
+file = "chall/flag.txt"
+
+[points]
+min = 50
+max = 500
+
+[container.default]
+build = "chall"
+
+[container.default.expose]
+3000 = "http"
+
+[[provide]]
+dir = "dist/"
+as = "desafe"

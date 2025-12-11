@@ -1,0 +1,1 @@
+wrangler pages publish --project-name orange-skies-amateurs-ctf-2025 --branch main pages/

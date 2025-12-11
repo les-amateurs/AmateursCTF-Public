@@ -1,0 +1,30 @@
+id = "web-devilnetv2"
+name = "Devil Net v2"
+author = "Chara"
+description = "Teemo feels happy and probably won't break things again this time. \n\n HINT: Teemo’s CSP scouts are too secure... In fact, they are so safe that sometimes they even **report** what they saw."
+flag = "amateursCTF{leakyy}"
+
+# visible = true
+
+category = "web"
+
+points.min = 50
+points.max = 500
+
+strategy = "instanced"
+
+[[provide]]
+dir = "dist/"
+as = "devilnet"
+
+[container.default]
+build = "chall/"
+limits.mem = 524288000
+
+[container.default.env]
+FLAG = "amateursCTF{leakyy}"
+
+[container.default.expose]
+9192 = "http"
+
+# a

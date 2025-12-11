@@ -1,0 +1,12 @@
+{
+  "name": "chall",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.6",
+    "devalue": "5.3.0",
+    "hono": "^4.10.5"
+  }
+}

@@ -1,0 +1,14 @@
+id = "misc-always-stego"
+name = "always-stego"
+author = "helloperson"
+description = "why is it always stego? it's so **frequently** stego that **even** i just hate it all-redy...\n\nHint: It is not any type of standard stego, but the flavortext hints apply. Random jpeg compression artifacts are just noise and shouldn't be visually interpreted."
+category = "misc"
+points.min = 50
+points.max = 500
+
+[flag]
+file = "src/flag.txt"
+
+[[provide]]
+dir = "dist/"
+as = "always-stego"

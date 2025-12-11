@@ -1,0 +1,14 @@
+id = "crypto-uncrackable"
+name = "uncrackable"
+author = "helloperson"
+description = "unless you have a supercomputer my messages should be safe"
+category = "crypto"
+points.min = 50
+points.max = 500
+
+[flag]
+file = "src/flag.txt"
+
+[[provide]]
+dir = "dist/"
+as = "uncrackable"

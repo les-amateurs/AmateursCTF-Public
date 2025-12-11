@@ -1,0 +1,21 @@
+id = "crypto-addition-3"
+name = "addition 3"
+author = "helloperson"
+description = "now it does more prime generation"
+category = "crypto"
+strategy = "instanced"
+points.min = 50
+points.max = 500
+
+[flag]
+file = "chall/flag.txt"
+
+[container.default]
+build = "chall/"
+
+[container.default.expose]
+5000 = "tcp"
+
+[[provide]]
+dir = "dist/"
+as = "addition3"

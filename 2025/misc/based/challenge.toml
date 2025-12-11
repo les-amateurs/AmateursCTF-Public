@@ -1,0 +1,13 @@
+id = "misc-based"
+name = "based"
+author = "Chara"
+description = "This is so based, can you help me to un-base it?"
+category = "misc"
+points.min = 50
+points.max = 500
+
+flag = "amateursCTF{I_l0v3_b453}"
+
+[[provide]]
+file = "flag.txt"
+as = "flag.txt"

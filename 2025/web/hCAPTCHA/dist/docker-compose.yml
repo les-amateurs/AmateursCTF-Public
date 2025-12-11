@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  chall:
+    build: ./chall
+    container_name: hcaptcha-chall
+    ports:
+      - "4071:4071"
+    depends_on:
+      - verifier
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - PORT=4071
+      - FLAG=amateursCTF{t3st_f14g}
+      - VERIFIER_HOST=verifier
+      - VERIFIER_PORT=5000
+
+  verifier:
+    build: ./verifier
+    container_name: hcaptcha-verifier
+    environment:
+      - HCAPTCHA_SECRET=ES_token_1234567890
+    expose:
+      - "5000"
+
+networks:
+  default:
+    name: hcaptcha-net

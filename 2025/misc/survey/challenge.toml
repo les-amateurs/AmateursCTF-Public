@@ -1,0 +1,8 @@
+id = "misc-survey"
+name = "survey"
+author = "amateursCTF organizers"
+description = "Fill out the [feedback form!](https://forms.gle/FXAaqSVaLAbTAEECA)"
+category = "misc"
+points.min = 0
+points.max = 0
+flag = "nuh uh you aren't guessing this"

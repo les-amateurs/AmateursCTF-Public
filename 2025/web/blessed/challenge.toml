@@ -1,0 +1,28 @@
+id = "web-blessed"
+name = "blessed"
+author = "Chara"
+description = "I still don't get why you need to fetch 20070 when it's 20070 miles away..."
+flag = "amateursCTF{mayb3_1ts_n0t_32299534_meter_away}"
+
+visible = true
+
+category = "web"
+
+points.min = 50
+points.max = 500
+
+strategy = "instanced"
+
+[[provide]]
+dir = "dist/"
+as = "blessed"
+
+[container.default]
+build = "chall/"
+limits.mem = 524288000
+env.FLAG = "amateursCTF{mayb3_1ts_n0t_32299534_meter_away}"
+
+
+[container.default.expose]
+8888 = "http"
+

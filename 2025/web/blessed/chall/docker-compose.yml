@@ -1,0 +1,8 @@
+services:
+  blessed:
+    build: .
+    ports:
+      - "8888:8888"
+    restart: always
+    environment:
+      - FLAG=amateursCTF{mayb3_1ts_n0t_32299534_meter_away}

@@ -1,0 +1,19 @@
+id = "pwn-rewrite-it-in-zig"
+name = "Rewrite It In Zig"
+author = "unvariant"
+description = "Sometimes rust is just a little too safe for me."
+category = "pwn"
+points.min = 50
+points.max = 500
+
+[flag]
+file = "work/flag"
+
+[container.default]
+build = "work/"
+privileged = true
+expose = { 5000 = "tcp" }
+
+[[provide]]
+dir = "dist/"
+as = "rewrite-it-in-zig"

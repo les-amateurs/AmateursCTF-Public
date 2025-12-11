@@ -1,0 +1,14 @@
+id = "crypto-triangulate"
+name = "triangulate"
+author = "helloperson"
+description = "if i give you a triangular number of 'triangular' outputs then that will help you triangulate the flag right"
+category = "crypto"
+points.min = 50
+points.max = 500
+
+[flag]
+file = "src/flag.txt"
+
+[[provide]]
+dir = "dist/"
+as = "triangulate"

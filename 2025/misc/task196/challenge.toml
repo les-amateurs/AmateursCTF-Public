@@ -1,0 +1,26 @@
+id = "misc-task196"
+name = "task196"
+author = "helloperson"
+description = "now do [task196](https://www.kaggle.com/competitions/google-code-golf-2025/overview) better than the [best public solution](https://github.com/arc-code-golf/solutions/).\n\nHint: my solution uses a list of size 2 in the listcomp rather than a list of size 3. alternatively you can do a little bit of OSINT (see links above) and then code golf a little bit."
+category = "misc"
+visible = true
+points.min = 50
+points.max = 500
+strategy = "static"
+
+[flag]
+file = "chall/outer/flag.txt"
+
+[container.inner]
+build = "chall/inner"
+privileged = true
+
+[container.outer]
+build = "chall/outer"
+
+[container.outer.expose]
+5000 = "tcp"
+
+[[provide]]
+dir = "dist/"
+as = "task196"

@@ -1,0 +1,14 @@
+id = "rev-floor-is-lava"
+name = "floor-is-lava"
+author = "cinabun"
+description = "dont touch the floor"
+category = "rev"
+points.min = 50
+points.max = 500
+
+[flag]
+file = "src/flag.txt"
+
+[[provide]]
+dir = "dist/"
+as = "floor-is-lava"

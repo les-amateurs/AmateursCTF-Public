@@ -1,0 +1,20 @@
+id = "pwn-easy-heap"
+name = "Easy Heap"
+author = "unvariant"
+description = "I promise it is actually simple this time."
+category = "pwn"
+points.min = 50
+points.max = 500
+visible = true
+
+[flag]
+file = "work/flag"
+
+[container.default]
+build = "work/"
+privileged = true
+expose = { 5000 = "tcp" }
+
+[[provide]]
+dir = "dist/"
+as = "easy-heap"

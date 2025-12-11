@@ -1,0 +1,13 @@
+id = "misc-gpt"
+name = "GPT"
+author = "Chara"
+description = "GPT says I hided something inside this base64 encoding..."
+category = "misc"
+points.min = 50
+points.max = 500
+
+flag = "amateursCTF{3v3ryth1ng_c4n_b3_st3go}"
+
+[[provide]]
+file = "dist/chall.txt"
+as = "chall.txt"

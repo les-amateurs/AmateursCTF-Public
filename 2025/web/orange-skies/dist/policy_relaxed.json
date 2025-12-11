@@ -1,0 +1,12 @@
+{
+    "URLBlocklist": [
+        "*"
+    ],
+    "URLAllowlist": [
+        "orange-skies-amateurs-ctf-2025.pages.dev",
+        "chrome://*",
+        "chrome-extension://*",
+        "devtools://*"
+    ],
+    "NetworkPredictionOptions": 2
+}

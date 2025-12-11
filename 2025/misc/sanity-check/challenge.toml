@@ -1,0 +1,8 @@
+id = "misc-sanity-check"
+name = "sanity-check"
+author = "amateursCTF organizers"
+description = "Join the [discord](https://discord.gg/gCX22asy65) and read the rules!"
+category = "misc"
+points.min = 10
+points.max = 10
+flag = "amateursCTF{w3lcome_t0_amateursCTF_2025}"

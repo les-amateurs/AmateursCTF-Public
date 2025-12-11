@@ -1,0 +1,33 @@
+id = "web-ripple-of-past-revirie"
+name = "Ripples of Past Reverie"
+author = "Chara"
+description = "May This Journey Lead Us Starward"
+flag = "amateursCTF{P3r_4sp3r4_4d_4str4_111}"
+
+visible = true
+
+category = "web"
+
+points.min = 50
+points.max = 500
+
+strategy = "instanced"
+
+[[provide]]
+dir = "dist/"
+as = "ripple-of-past-revirie"
+
+[container.web]
+build = "chall/web"
+
+[container.web.expose]
+4000 = "http"
+
+
+[container.bot]
+build = "chall/bot"
+limits.mem = 1073741824
+env.FLAG = "amateursCTF{P3r_4sp3r4_4d_4str4_111}"
+
+[container.bot.expose]
+5000 = "http"

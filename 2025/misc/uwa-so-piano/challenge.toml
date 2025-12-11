@@ -1,0 +1,13 @@
+id = "uwa-so-piano"
+name = "Uwa so Piano"
+author = "smashmaster"
+description = "almost as bad of a time as the transcription quality"
+category = "misc"
+points.min = 50
+points.max = 500
+
+flag = "amateursCTF{h1t_th3_n0t3s}"
+
+[[provide]]
+dir = "dist/"
+as = "megalovania_snippet"

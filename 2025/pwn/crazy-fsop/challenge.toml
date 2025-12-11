@@ -1,0 +1,19 @@
+id = "pwn-crazy-fsop"
+name = "Crazy FSOP"
+author = "unvariant"
+description = "FSOP is fun. You should try it sometime."
+category = "pwn"
+points.min = 50
+points.max = 500
+
+[flag]
+file = "work/flag"
+
+[container.default]
+build = "work/"
+privileged = true
+expose = { 5000 = "tcp" }
+
+[[provide]]
+dir = "dist/"
+as = "crazy-fsop"

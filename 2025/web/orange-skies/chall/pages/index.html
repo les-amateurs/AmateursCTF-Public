@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orange Skies</title> 
+</head>
+<body>
+    <h1>Orange Skies</h1>
+    <p>
+        Orange is a good color but not gray.
+    </p>
+    <style>
+        body {
+            background-color: orange;
+        }
+        h1 {
+            color: white;
+        }
+        p {
+            color: white;
+        }
+    </style>
+    <form>
+        <textarea placeholder="Your payload here please." name="xss" rows="5" cols="50" title="owo nyani's this? fwee xss? suwewy t-thewe's nyothing t-that wouwd cancew t-the xss. OwO"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        const usp = new URLSearchParams(window.location.search);
+        const xss = usp.get('xss');
+        if(xss) {
+            const script = document.createElement('script');
+            script.textContent = xss;
+            document.body.appendChild(script);
+        }
+    </script>
+</body>
+</head>
+</html>

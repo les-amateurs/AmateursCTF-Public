@@ -1,0 +1,1 @@
+.\jasm\bin\jasm.bat --target 49 '.\Main.jasm'

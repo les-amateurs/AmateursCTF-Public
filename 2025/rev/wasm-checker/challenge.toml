@@ -1,0 +1,14 @@
+id = "rev-wasm-checker"
+name = "wasm-checker"
+author = "cinabun"
+description = "its a flag checker"
+category = "rev"
+points.min = 50
+points.max = 500
+
+[flag]
+file = "src/flag.txt"
+
+[[provide]]
+dir = "dist/"
+as = "wasm-checker"

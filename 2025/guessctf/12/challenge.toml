@@ -1,0 +1,16 @@
+id = "guessctf-12"
+name = "12"
+author = ""
+description = ""
+category = "guessctf"
+points.min = 0
+points.max = 0
+flag = "no"
+visible = false
+
+[container.default]
+build = "./"
+privileged = true
+
+[container.default.expose]
+5000 = "tcp"

@@ -1,0 +1,15 @@
+services:
+  web:
+    build: ./web
+    ports: 
+      - "4000:4000"
+    restart: unless-stopped
+  bot:
+    build: ./bot
+    restart: unless-stopped
+    depends_on:
+      - web
+    ports:
+      - "5000:5000"
+    environment:
+      - FLAG=amateursCTF{t3st_fl4g}

@@ -1,0 +1,21 @@
+id = "crypto-addition-2"
+name = "addition 2"
+author = "helloperson"
+description = "now it does more addition"
+category = "crypto"
+strategy = "instanced"
+points.min = 50
+points.max = 500
+
+[flag]
+file = "chall/flag.txt"
+
+[container.default]
+build = "chall/"
+
+[container.default.expose]
+5000 = "tcp"
+
+[[provide]]
+dir = "dist/"
+as = "addition2"

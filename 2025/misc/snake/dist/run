@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+./make_admin.py
+socat TCP-LISTEN:5000,fork,reuseaddr,bind=0.0.0.0 EXEC:"/srv/app/snake.sh"

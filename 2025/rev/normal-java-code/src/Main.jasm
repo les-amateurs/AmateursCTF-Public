@@ -1,0 +1,976 @@
+public class Main {
+    public static main([java/lang/String)V {
+        getstatic java/lang/System.out java/io/PrintStream
+        ldc "\n\n==================================================\nwelcome to the bear flag calculator!\ncalculating your flag... please be patient...\nyour flag is: "
+        invokevirtual java/io/PrintStream.print(java/lang/String)V
+
+        // Load coefficients
+        ldc 0       // Sentinel value
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        // }(18) =
+        ldc 33
+        istore 0
+    coefficientLoad0:
+        ldc 139968L
+        ldc 5668704L
+        ldc -1304525088L
+        ldc -136713343536L
+        ldc -6199669846548L
+        ldc -168942465814554L
+        ldc -3090696072809988L
+        ldc -40091725176298332L
+        ldc -380192091498886956L
+        ldc -2681484757726506270L
+        ldc 4262732026354931284L
+        ldc -1010288408357244504L
+        ldc -1290340284545482380L
+        ldc 2078316189846199370L
+        ldc 8600033438064957380L
+        ldc 1420642205836072100L
+        ldc -8455265360534582900L
+        ldc 1665170620416952526L
+        ldc -1301775785128209268L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad0
+        ldc 19
+
+        // l(18) =
+        ldc 33
+        istore 0
+    coefficientLoad1:
+        ldc 8748L
+        ldc 1414260L
+        ldc 26723439L
+        ldc -10660294170L
+        ldc -1221377280201L
+        ldc -69067032564330L
+        ldc -2484601406995677L
+        ldc -61766129802830370L
+        ldc -1102152172282805925L
+        ldc 4064385248137766326L
+        ldc -9180640905693487451L
+        ldc -2428929420931013902L
+        ldc 7433817110216891877L
+        ldc 570301496243907042L
+        ldc 5254839426900975617L
+        ldc -1280151659966208822L
+        ldc -8888534056241547107L
+        ldc 3270166363338602206L
+        ldc -7827650834523256696L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad1
+        ldc 19
+
+        // o(18) =
+        ldc 33
+        istore 0
+    coefficientLoad2:
+        ldc 576L
+        ldc 146496L
+        ldc 12112048L
+        ldc -275935968L
+        ldc -147400189732L
+        ldc -15435698167996L
+        ldc -963396145601043L
+        ldc -41855620854074132L
+        ldc -1341408083771387994L
+        ldc 4312977838210654592L
+        ldc 1791641609139274227L
+        ldc -3503117117902889960L
+        ldc -3088454007629645152L
+        ldc 8848217138088398820L
+        ldc 3062279033678910147L
+        ldc -6684007589624798244L
+        ldc 4740777470248945982L
+        ldc 9040021092677972248L
+        ldc 3652210279687931405L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad2
+        ldc 19
+
+        // o(18) =
+        ldc 33
+        istore 0
+    coefficientLoad3:
+        ldc 46656L
+        ldc 6788448L
+        ldc 39481344L
+        ldc -58856964336L
+        ldc -6103475822700L
+        ldc -332663882200458L
+        ldc -11846817654688062L
+        ldc -297391697652357612L
+        ldc -5448907467944869656L
+        ldc -240756732184936670L
+        ldc 7557340208061021758L
+        ldc -3055365093473528504L
+        ldc 862558048250048660L
+        ldc 8515228054694805722L
+        ldc -7642578819372557762L
+        ldc -3454788906313965484L
+        ldc -4477929424018395536L
+        ldc 2988288913377215854L
+        ldc -4830491881878959358L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad3
+        ldc 19
+
+        // c(18) =
+        ldc 33
+        istore 0
+    coefficientLoad4:
+        ldc 34992L
+        ldc 5015520L
+        ldc 102054168L
+        ldc -29631948768L
+        ldc -3372424301925L
+        ldc -192396619525590L
+        ldc -7195231516974519L
+        ldc -192191118265946044L
+        ldc -3814454414305521069L
+        ldc -2039952563681889898L
+        ldc 4210575270153678009L
+        ldc 6197086543140623960L
+        ldc -8480945980504676871L
+        ldc -2409180279491630794L
+        ldc -2611622199478744541L
+        ldc -4246470620712608252L
+        ldc 1457600041085969513L
+        ldc 727591600248688234L
+        ldc 4873507416256484803L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad4
+        ldc 19
+
+        // _(18) =
+        ldc 33
+        istore 0
+    coefficientLoad5:
+        ldc 34992L
+        ldc 2437776L
+        ldc -136554336L
+        ldc -22142284740L
+        ldc -1155643517547L
+        ldc -34440854121072L
+        ldc -671061906273642L
+        ldc -9077406493695852L
+        ldc -88058569837809285L
+        ldc -623934430871284104L
+        ldc -3258622023335906448L
+        ldc 5876162155016540260L
+        ldc 1231306228709245595L
+        ldc 222499297403274784L
+        ldc 2569385785572497022L
+        ldc 1310833369215277644L
+        ldc 2010343674646223941L
+        ldc -8821384138009525304L
+        ldc -4508618494801320900L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad5
+        ldc 19
+
+        // e(18) =
+        ldc 33
+        istore 0
+    coefficientLoad6:
+        ldc 1679616L
+        ldc 277136640L
+        ldc 9692970624L
+        ldc -1422224101440L
+        ldc -204338969339904L
+        ldc -13478104966543920L
+        ldc -574707629113712856L
+        ldc 1007863641486612436L
+        ldc -5197709306964673473L
+        ldc -8387002613302458838L
+        ldc -8206330036474289953L
+        ldc 4013747348815460624L
+        ldc 3274496121279401134L
+        ldc -5313291341872763108L
+        ldc 3620609337395217774L
+        ldc -9025275002787940948L
+        ldc -1220755215152531853L
+        ldc -4109684211436336742L
+        ldc 4924223426003895211L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad6
+        ldc 19
+
+        // r(18) =
+        ldc 33
+        istore 0
+    coefficientLoad7:
+        ldc 5184L
+        ldc 884736L
+        ldc 23056272L
+        ldc -6824846400L
+        ldc -914899457860L
+        ldc -60350940043552L
+        ldc -2583666692190413L
+        ldc -78260436991300276L
+        ldc -1743625496459165555L
+        ldc 7787189488059442192L
+        ldc 2477390998100830586L
+        ldc -4650455043496741848L
+        ldc -8303729601757835578L
+        ldc 7484218889437802576L
+        ldc 2936373258989651239L
+        ldc 3169085310323819692L
+        ldc 1300550019928774049L
+        ldc 386990088051114720L
+        ldc -8896528384153874260L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad7
+        ldc 19
+
+        // a(18) =
+        ldc 33
+        istore 0
+    coefficientLoad8:
+        ldc 104976L
+        ldc 25876584L
+        ldc 2207064996L
+        ldc -1421067402L
+        ldc -16975173429054L
+        ldc -1787546503915218L
+        ldc -107028057723819894L
+        ldc -4405879701728549154L
+        ldc -4038252538400293702L
+        ldc -921567798844201370L
+        ldc 3047470220774532874L
+        ldc 1443679329959270978L
+        ldc -727597003368712666L
+        ldc 4788714558851661930L
+        ldc -181319753990644770L
+        ldc 3270964186097359338L
+        ldc 3404651935777878478L
+        ldc -6769392680452861670L
+        ldc -3993177484119107222L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad8
+        ldc 19
+
+        // _(18) =
+        ldc 33
+        istore 0
+    coefficientLoad9:
+        ldc 10368L
+        ldc 2401920L
+        ldc 183307104L
+        ldc -2406889536L
+        ldc -1548736359688L
+        ldc -142728231469336L
+        ldc -7618121483991942L
+        ldc -277207393691124592L
+        ldc -7286275161642921244L
+        ldc 5728269050213558216L
+        ldc 2163257914477573294L
+        ldc -1651253694791623968L
+        ldc -5332672475574895888L
+        ldc 5670581969580992184L
+        ldc 4722922663732830262L
+        ldc -5140488267151724464L
+        ldc 2857217307181004404L
+        ldc 3689631063985650840L
+        ldc -7544184654336337022L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad9
+        ldc 19
+
+        // s(18) =
+        ldc 33
+        istore 0
+    coefficientLoad10:
+        ldc 46656L
+        ldc 4385664L
+        ldc -201003120L
+        ldc -53814639168L
+        ldc -4013457016212L
+        ldc -173617432839240L
+        ldc -5042862562373013L
+        ldc -104488640651251224L
+        ldc -1591746789722905338L
+        ldc 354495864531750664L
+        ldc -6599072343152943871L
+        ldc -4411242035675151760L
+        ldc 40341593311307744L
+        ldc 5319299384879524584L
+        ldc 2112449841113457213L
+        ldc 361235905345368744L
+        ldc 4874699891546192526L
+        ldc -6481032793851284968L
+        ldc -3793531303538899289L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad10
+        ldc 19
+
+        // l(18) =
+        ldc 33
+        istore 0
+    coefficientLoad11:
+        ldc 15552L
+        ldc 4183488L
+        ldc 373073904L
+        ldc -4329354672L
+        ldc -3953354662764L
+        ldc -422427961750700L
+        ldc -26010393342733715L
+        ldc -1093860902509714309L
+        ldc 3490423937368633287L
+        ldc -5464188247457000747L
+        ldc -3681525459521522362L
+        ldc 5370563176357251742L
+        ldc -800638681479098462L
+        ldc 4585505281331689694L
+        ldc 706712822569378793L
+        ldc -7236641882254413177L
+        ldc 2632951496217652339L
+        ldc -3704181124037433527L
+        ldc 825596779461060420L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad11
+        ldc 19
+
+        // a(18) =
+        ldc 33
+        istore 0
+    coefficientLoad12:
+        ldc 78732L
+        ldc 6928416L
+        ldc -227358333L
+        ldc -58603762521L
+        ldc -3712208766255L
+        ldc -132333403855653L
+        ldc -3102068925468351L
+        ldc -51060111466457637L
+        ldc -610981839411598827L
+        ldc -5419154092790447537L
+        ldc 909882275855010683L
+        ldc 5100093266219088197L
+        ldc -4593515856727495933L
+        ldc 376691970646840769L
+        ldc -246464679650945717L
+        ldc 5733858527181028217L
+        ldc 3120592970343724235L
+        ldc 7401133743249552309L
+        ldc -6503471003769017290L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad12
+        ldc 19
+
+        // i(18) =
+        ldc 33
+        istore 0
+    coefficientLoad13:
+        ldc 2592L
+        ldc 629856L
+        ldc 44302320L
+        ldc -2073761280L
+        ldc -581570685934L
+        ldc -47603325425150L
+        ldc -2258057897108664L
+        ldc -70349484660027380L
+        ldc -1507047778731442738L
+        ldc -4195469843024187482L
+        ldc -783878768661595604L
+        ldc -4685085351197651512L
+        ldc 2615543050766714414L
+        ldc 6093186943513384366L
+        ldc 5228386900623932656L
+        ldc -622594117613578388L
+        ldc -7503765508084806894L
+        ldc 6449281599412540682L
+        ldc 4921942884542611564L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad13
+        ldc 19
+
+        // m(18) =
+        ldc 33
+        istore 0
+    coefficientLoad14:
+        ldc 972L
+        ldc 204120L
+        ldc 11234835L
+        ldc -960624693L
+        ldc -196784350011L
+        ldc -15585466550765L
+        ldc -768039509530119L
+        ldc -26337520900110793L
+        ldc -657961025551171999L
+        ldc 6217906232626704703L
+        ldc -4378916778135944645L
+        ldc -6491684318319930271L
+        ldc -5279262767991673649L
+        ldc 1738109584207253721L
+        ldc -6104834775968071709L
+        ldc 5332252132885895005L
+        ldc -6304913124287651585L
+        ldc -6487500512930844483L
+        ldc -6037811238840157930L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad14
+        ldc 19
+
+        // o(18) =
+        ldc 33
+        istore 0
+    coefficientLoad15:
+        ldc 1417176L
+        ldc 146677716L
+        ldc -4015843758L
+        ldc -1539441973665L
+        ldc -124726832276310L
+        ldc -5804068771740447L
+        ldc -182554755923315160L
+        ldc -4142426007052871793L
+        ldc 3727620600874546078L
+        ldc 5952112364986394257L
+        ldc 927574149897768728L
+        ldc 6079429856602446645L
+        ldc -3643130350962660282L
+        ldc 2168029387855327547L
+        ldc -6463581842772415792L
+        ldc 1174929175800435549L
+        ldc -470396413515216806L
+        ldc -2980173778076805377L
+        ldc 942145539884111070L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad15
+        ldc 19
+
+        // n(18) =
+        ldc 33
+        istore 0
+    coefficientLoad16:
+        ldc 93312L
+        ldc 11959488L
+        ldc -134527392L
+        ldc -114804549072L
+        ldc -9853474506840L
+        ldc -452894163515004L
+        ldc -13458284062198094L
+        ldc -278374520780758679L
+        ldc -4162703879366499597L
+        ldc -9052774182756655904L
+        ldc 9202205934571414400L
+        ldc -2326913859693466110L
+        ldc -3868574266836531402L
+        ldc 746330790610071188L
+        ldc 3052976996760480010L
+        ldc -4238071449677711139L
+        ldc 8240144322000336199L
+        ldc -9129665124693863472L
+        ldc 5587270281781684940L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad16
+        ldc 19
+
+        // y(18) =
+        ldc 33
+        istore 0
+    coefficientLoad17:
+        ldc 5184L
+        ldc 605664L
+        ldc -14591232L
+        ldc -7343029392L
+        ldc -677769486812L
+        ldc -35749506471754L
+        ldc -1274313463151274L
+        ldc -32772531088213716L
+        ldc -627803448305119896L
+        ldc -9099183682080612246L
+        ldc -8092041892745764350L
+        ldc 9044352735169542936L
+        ldc -4592187226848046268L
+        ldc 2993434728687034666L
+        ldc 5913162569070779930L
+        ldc -6153021115901972084L
+        ldc 3488133930936942000L
+        ldc -2879243489195954538L
+        ldc -2214458052120637746L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad17
+        ldc 19
+
+        // l(18) =
+        ldc 33
+        istore 0
+    coefficientLoad18:
+        ldc 3456L
+        ldc 560448L
+        ldc 14224224L
+        ldc -3849366064L
+        ldc -493941252504L
+        ldc -31089264543316L
+        ldc -1269181677017390L
+        ldc -36644724751179937L
+        ldc -777900416972147126L
+        ldc 6077914311372410225L
+        ldc -773704009072258584L
+        ldc 6119395773709755494L
+        ldc 6399014073100880476L
+        ldc -8237875642048388530L
+        ldc 620951651366956354L
+        ldc 4270677452932226779L
+        ldc 130695344685096210L
+        ldc -7848904709743030043L
+        ldc -1717748500440447740L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad18
+        ldc 19
+
+        // o(5) =
+        ldc 33
+        istore 0
+    coefficientLoad19:
+        ldc 27L
+        ldc -549L
+        ldc -196302L
+        ldc -7406030L
+        ldc -102842573L
+        ldc -489714573L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad19
+        ldc 6
+
+        // p(4) =
+        ldc 33
+        istore 0
+    coefficientLoad20:
+        ldc 9L
+        ldc -801L
+        ldc -21865L
+        ldc -145391L
+        ldc -261744L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad20
+        ldc 5
+
+        // {(3) =
+        ldc 33
+        istore 0
+    coefficientLoad21:
+        ldc 3L
+        ldc -235L
+        ldc -15631L
+        ldc -104673L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad21
+        ldc 4
+
+        // f(3) =
+        ldc 33
+        istore 0
+    coefficientLoad22:
+        ldc 6L
+        ldc -455L
+        ldc -15113L
+        ldc -91902L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad22
+        ldc 4
+
+        // t(3) =
+        ldc 33
+        istore 0
+    coefficientLoad23:
+        ldc 2L
+        ldc -53L
+        ldc -17165L
+        ldc -417484L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad23
+        ldc 4
+
+        // c(3) =
+        ldc 33
+        istore 0
+    coefficientLoad24:
+        ldc 9L
+        ldc -609L
+        ldc -25745L
+        ldc -215127L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad24
+        ldc 4
+
+        // s(3) =
+        ldc 33
+        istore 0
+    coefficientLoad25:
+        ldc 3L
+        ldc -307L
+        ldc -4251L
+        ldc -13685L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad25
+        ldc 4
+
+        // r(3) =
+        ldc 33
+        istore 0
+    coefficientLoad26:
+        ldc 1L
+        ldc -58L
+        ldc -5825L
+        ldc -63726L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad26
+        ldc 4
+
+        // u(2) =
+        ldc 33
+        istore 0
+    coefficientLoad27:
+        ldc 2L
+        ldc -191L
+        ldc -5031L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad27
+        ldc 3
+
+        // e(2) =
+        ldc 33
+        istore 0
+    coefficientLoad28:
+        ldc 3L
+        ldc -290L
+        ldc -1313L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad28
+        ldc 3
+
+        // t(2) =
+        ldc 33
+        istore 0
+    coefficientLoad29:
+        ldc 3L
+        ldc -346L
+        ldc -232L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad29
+        ldc 3
+
+        // a(2) =
+        ldc 33
+        istore 0
+    coefficientLoad30:
+        ldc 3L
+        ldc -232L
+        ldc -5723L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad30
+        ldc 3
+
+        // m(2) =
+        ldc 33
+        istore 0
+    coefficientLoad31:
+        ldc 3L
+        ldc -296L
+        ldc -3379L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad31
+        ldc 3
+
+        // a(2) =
+        ldc 33
+        istore 0
+    coefficientLoad32:
+        ldc 1L
+        ldc -68L
+        ldc -2813L
+        iload 0
+        iconst 1
+        isub
+        dup
+        istore 0
+        ifgt coefficientLoad32
+        ldc 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+        // Calculate chars
+    calculateChar:
+        ldc 95      // Start guesses at 95
+        istore 0    // Char value
+
+        istore 2    // Number of coefficients
+
+    checkCharLoop:
+        iconst 0
+        istore 3    // Temporary coefficient index
+
+        lconst 0
+        lstore 4    // Running total
+
+    evaluatePolynomialLoop:
+        // coefficient * x**coefficientIndex
+        // Check if coefficientIndex is 0
+        iload 3
+        ifne nonzeroCoefficientIndex
+
+        // Exponent is zero, so just add the coefficient
+        goto sum
+
+    nonzeroCoefficientIndex:
+        // Push onto the stack coefficientIndex times, then multiply coefficientIndex times
+        // The extra multiply multiplies the power by the coefficient
+        iconst 0
+        istore 6    // Counter
+
+    powerPushLoop:
+        iload 0
+        i2l
+        iload 6
+        iconst 1
+        iadd
+        dup
+        istore 6
+        iload 3
+        if_icmplt powerPushLoop
+
+        iconst 0
+        istore 6    // Counter
+    powerMulLoop:
+        // The following is a slow substitute for lmul
+        lstore 10   // Always positive
+        lstore 8    // May be negative
+        lconst 0
+    multiplyLoop:
+        lload 8
+        ladd
+        lload 10
+        lconst 1
+        lsub
+        dup2
+        lstore 10
+        lconst 0
+        lcmp
+        ifne multiplyLoop
+        // lmul
+
+        iload 6
+        iconst 1
+        iadd
+        dup
+        istore 6
+        iload 3
+        if_icmplt powerMulLoop
+    powerMulLoopEnd:
+        goto sum
+
+    sum:
+        // total += coefficient * power
+        lload 4
+        ladd
+        lstore 4
+
+        // Next coefficient
+        iload 3
+        iconst 1
+        iadd
+        dup
+        istore 3
+        iload 2
+        if_icmplt evaluatePolynomialLoop
+
+    polynomialFinished:
+        // Check if total is 0
+        lload 4
+        lconst 0
+        lcmp
+        ifne checkNextChar
+
+    charFound:
+        iload 0
+        istore 1    // Store char value
+
+    checkNextChar:
+        // Check if we should continue onto the next char
+        iload 0
+        iconst 1
+        iadd
+        dup
+        istore 0
+        ldc 128
+        if_icmplt checkCharLoop
+
+    printChar:
+        getstatic java/lang/System.out java/io/PrintStream
+        iload 1
+        i2c
+        invokevirtual java/io/PrintStream.print(C)V
+
+        // Check for flag sentinel (value of 0L indicates end of flag)
+        dup
+        ifne calculateChar
+
+        return
+    }
+}

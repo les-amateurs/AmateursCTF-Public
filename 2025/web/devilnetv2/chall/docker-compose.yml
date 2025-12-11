@@ -1,0 +1,6 @@
+services:
+  devilnetv2:
+    build: .
+    ports:
+      - "9192:9192"
+    restart: unless-stopped

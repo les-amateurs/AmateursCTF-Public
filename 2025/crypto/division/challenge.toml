@@ -1,0 +1,14 @@
+id = "crypto-division"
+name = "division"
+author = "helloperson"
+description = "they said i could just use division to find the flag but something's up"
+category = "crypto"
+points.min = 50
+points.max = 500
+
+[flag]
+file = "src/flag.txt"
+
+[[provide]]
+dir = "dist/"
+as = "division"

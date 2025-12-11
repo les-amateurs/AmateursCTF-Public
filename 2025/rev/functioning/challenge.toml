@@ -1,0 +1,14 @@
+id = "rev-functioning"
+name = "functioning"
+author = "cinabun"
+description = "i hope you like functions\n\nNote: correct input to the program should be the flag"
+category = "rev"
+points.min = 50
+points.max = 500
+
+[flag]
+file = "src/flag.txt"
+
+[[provide]]
+dir = "dist/"
+as = "functioning"

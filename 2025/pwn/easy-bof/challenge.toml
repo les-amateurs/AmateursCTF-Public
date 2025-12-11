@@ -1,0 +1,19 @@
+id = "pwn-easy-bof"
+name = "Easy Bof"
+author = "unvariant"
+description = "Pwners sanity check."
+category = "pwn"
+points.min = 50
+points.max = 500
+
+[flag]
+file = "work/flag"
+
+[container.default]
+build = "work/"
+privileged = true
+expose = { 5000 = "tcp" }
+
+[[provide]]
+dir = "dist/"
+as = "easy-bof"

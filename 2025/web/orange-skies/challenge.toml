@@ -1,0 +1,29 @@
+id = "web-orange-skies"
+name = "Orange Skies"
+author = "smashmaster"
+description = "Beware the headers within the orange skies. Note: this is meant to be a easy variant."
+category = "web"
+points.min = 50
+points.max = 500
+flag = "amateursCTF{v3ry_sp3c1al_s33_y0u_n3xt_cha1}"
+strategy = "instanced"
+
+[container.default]
+build = "chall/"
+limits.mem = 524288000
+
+[container.default.expose]
+3000 = "http"
+
+[container.default.env]
+FLAG = "amateursCTF{v3ry_sp3c1al_s33_y0u_n3xt_cha1}"
+PORT = "3000"
+
+# the admin bot serves all the files for the chall but just in case if instancing dies too early.
+# [[provide]]
+# file = "chall/admin-bot-server.js"
+# as = "orange-skies"
+
+[[provide]]
+dir = "dist/"
+as = "orange-skies"

@@ -1,0 +1,23 @@
+id = "pwn-injection"
+name = "Injection"
+author = "unvariant"
+description = "Who needs ptrace anyways?"
+category = "pwn"
+points.min = 50
+points.max = 500
+visible = true
+
+[flag]
+file = "work/flag"
+
+[container.default]
+build = "work/"
+privileged = true
+expose = { 5000 = "tcp" }
+
+[container.default.env]
+POLLUTANT = "me_personally_i_would_never_hehe"
+
+[[provide]]
+dir = "dist/"
+as = "injection"

@@ -1,0 +1,40 @@
+id = "web-hcaptcha"
+name = "hCAPTCHA"
+author = "Chara"
+description = "I love all kind of CAPTCHA. Attachment Password is amateursCTF.\n\n https://drive.google.com/file/d/19-w4KlzP8NLqmP9wg0O0tcpdAJJo6MjI/view"
+flag = "amateursCTF{W_C4PTCH4_B3h4v13r}"
+
+category = "web"
+
+points.min = 50
+points.max = 500
+
+strategy = "instanced"
+
+# [[provide]]
+# dir = "dist/"
+# as = "dist"
+
+[container.verifier]
+build = "chall/verifier"
+
+[container.verifier.env]
+HCAPTCHA_SECRET = "ES_3fd71b28c74f4e6fba1a84784d0cb86b"
+
+
+[container.chall]
+build = "chall/chall/"
+limits.mem = 1073741824
+# cap_add = ["NET_ADMIN"]
+privileged = true
+
+[container.chall.env]
+PORT = "4071"
+FLAG = "amateursCTF{W_C4PTCH4_B3h4v13r}"
+VERIFIER_HOST = "verifier"
+ERIFIER_PORT = "5000"
+
+[container.chall.expose]
+4071 = "http"
+
+# a

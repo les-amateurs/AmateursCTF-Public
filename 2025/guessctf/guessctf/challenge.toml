@@ -1,0 +1,14 @@
+id = "guessctf-guessctf"
+name = "guessctf"
+author = "helloperson"
+description = "after smileyctf im legally obliged to put a disclaimer that this is not a serious challenge. you will not solve it and it IS as guessy as the challenge name implies. have fun with the rest of the ctf."
+category = "guessctf"
+points.min = 0
+points.max = -50000
+
+[flag]
+file = "src/flag.txt"
+
+[[provide]]
+dir = "dist/"
+as = "pure-guess"

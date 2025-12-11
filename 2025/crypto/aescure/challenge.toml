@@ -1,0 +1,14 @@
+id = "crypto-aescure"
+name = "aescure"
+author = "helloperson"
+description = "this is definitely not secure but im doing it anyways"
+category = "crypto"
+points.min = 50
+points.max = 500
+
+[flag]
+file = "src/flag.txt"
+
+[[provide]]
+dir = "dist/"
+as = "aescure"

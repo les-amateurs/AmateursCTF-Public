@@ -1,0 +1,2 @@
+/*
+  Content-Security-Policy: default-src 'none'; frame-ancestors 'none'; base-uri 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';

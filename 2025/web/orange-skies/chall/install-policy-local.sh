@@ -1,0 +1,1 @@
+sudo cp policy_relaxed.json /etc/opt/chrome_for_testing/policies/managed/challenge-policy.json

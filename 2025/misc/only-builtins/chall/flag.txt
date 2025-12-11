@@ -1,0 +1,1 @@
+amateursCTF{0nly_bu1lt1ns_in_C_is_much_h4rder_th4n_in_pyth0n}
